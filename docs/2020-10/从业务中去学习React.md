@@ -27,7 +27,7 @@ const Inner = ({
 }) => {
   const currentMode = 'inner'
   return (<>
-  				<h5>current is Inner</h5>
+  	  <h5>current is Inner</h5>
           use father's props:
           <ul>
           	<li onClick={() => onClick(currentMode)}>name: {name}</li>
@@ -44,7 +44,7 @@ const Outer = () => {
     onClick: handleClick
   }
   return (<>
-  				<h5>current is Outer</h5>
+  	  <h5>current is Outer</h5>
           <Inner {...innerProps} />
           </>)
 }
@@ -92,7 +92,7 @@ const Inner = ({
     }
   }, [])
   return (<>
-          	<h5>current is Inner</h5>
+            <h5>current is Inner</h5>
           </>)
 }
 
@@ -103,8 +103,8 @@ const Outer = () => {
     innerRef.current.onChange()
   }
   return (<>
-          	<Inner ref={innerRef} />
-						<button onClick={handleClick}>calling inner Change</button>
+            <Inner ref={innerRef} />
+	    <button onClick={handleClick}>calling inner Change</button>
           </>)
 }
 ```
@@ -125,12 +125,12 @@ const Inner = ({ children, ...props }) => {
 const Outer = () => {
   return (<>
           	<Inner>
-          		{
-    						children => (<p>
-    								current is Inner
-    								<Inner children={() => (<p>current is children inner</p>)}>
-    						</p>)
-  						}
+          	{
+    		  children => (<p>
+    				current is Inner
+    			        <Inner children={() => (<p>current is children inner</p>)}>
+    			       </p>)
+  		}
           	</Inner>
           </>)
 }
@@ -158,7 +158,7 @@ const Inner = ({
 }
 
 const mapStateToProps = ({ Store, StoreRoot }) => ({ 
-	store: {
+  store: {
     Store,
     StoreRoot
   }
