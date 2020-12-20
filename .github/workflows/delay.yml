@@ -1,0 +1,10 @@
+name: Github Publish Docs
+
+on: push
+
+jobs: 
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'checkout codes'
+        uses: actions/checkout@v1    
