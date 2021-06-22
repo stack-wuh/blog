@@ -1,0 +1,28 @@
+{
+  "author": "吴尒红 <wuh131420@foxmail.com>",
+  "title": "碎片化知识管理仓库",
+  "description": "知识的碎片化管理是相当重要的，每一段时间过后，我们都需要沉淀一下，将我们过去的一段时间内接受的知识再次整合。",
+  "root": ".",
+  "plugins": [
+    "github",
+    "donate",
+    "chart"
+  ],
+  "pluginsConfig": {
+    "github": {
+      "url": "https://github.com/stack-wuh/stack-wuh.github.io"
+    },
+    "chart": {
+      "type": "c3"
+    },
+    "favicon": "https://src.wuh.site/avatar.png",
+    "donate": {
+      "wechat": "/images/wechat.jpg",
+      "alipay": "/images/alipay.jpg",
+      "title": "赏",
+      "button": "捐赠",
+      "alipayText": "支付宝",
+      "wechatText": "微信"
+    }
+  }
+}
