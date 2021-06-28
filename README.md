@@ -1,5 +1,3 @@
-# Introduction
+# 欢迎进坑Javascript
 
-```jsvascript
-console.log('welcome to javascript')
-```
+### 不要停步不前，每一天都要做出一点改变

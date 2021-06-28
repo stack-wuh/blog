@@ -3,17 +3,45 @@
   "title": "碎片化知识管理仓库",
   "description": "知识的碎片化管理是相当重要的，每一段时间过后，我们都需要沉淀一下，将我们过去的一段时间内接受的知识再次整合。",
   "root": ".",
+  "ignores": ["_book", "node_modules"],
   "plugins": [
     "github",
     "donate",
-    "chart"
+    "chart",
+    "theme-comscore",
+    "tbfed-pagefooter",
+    "back-to-top-button",
+    "sharing-plus",
+    "pageview-count",
+    "code",
+    "--sharing"
   ],
   "pluginsConfig": {
     "github": {
-      "url": "https://github.com/stack-wuh/stack-wuh.github.io"
+      "url": "https://stack-wuh.github.io/blog/"
     },
     "chart": {
       "type": "c3"
+    },
+    "tbfed-pagefooter": {
+      "copyright": "Copyright© 2021 shadow.",
+      "modify_label": "该文章修订时间：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "sharing": {
+      "douban": true,
+      "facebook": false,
+      "google": false,
+      "pocket": false,
+      "qq": true,
+      "qzone": true,
+      "twitter": true,
+      "weibo": true,
+      "all": [
+          "qq", "qzone","viber","whatsapp",
+            "douban", "facebook", "google", "instapaper", "linkedin",
+            "messenger","twitter", "weibo"
+        ]
     },
     "favicon": "https://src.wuh.site/avatar.png",
     "donate": {
