@@ -1,3 +1,4 @@
-# 欢迎进坑Javascript
+# Shadow's blog
+___
 
 ### 不要停步不前，每一天都要做出一点改变
