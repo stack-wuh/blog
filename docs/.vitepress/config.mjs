@@ -6,6 +6,21 @@ export default defineConfig({
   title: "shadow's wiki",
   description: "Fragmented knowledge manager",
   titleTemplate: '吴尒红',
+  head: [
+    ['link', { rel: 'icon', href: 'https://wuh.site/_next/image?url=%2Ficons%2F64.png&w=64&q=75' }],
+    [
+      'script',
+      { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-X4ZVBQXW9E' }
+    ],
+    [
+      'script',
+      {},
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-X4ZVBQXW9E');`
+    ]
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -38,6 +53,10 @@ export default defineConfig({
 
     outline: {
       level: [2, 3]
+    },
+
+    logo: {
+      src: 'https://wuh.site/_next/image?url=%2Ficons%2F64.png&w=64&q=75'
     }
   },
   vite: {
