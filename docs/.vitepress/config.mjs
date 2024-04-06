@@ -51,7 +51,8 @@ export default defineConfig({
   rewrites: {
     '([0-9]{4})/(.*)': '$blog/([0-9]{4})/(.*)'
   },
-  outDir: 'blog.wuh.site',
+  outDir: 'wiki.wuh.site',
   srcExclude: ['**/README.md', '**/*.js', '**/*.png', '**/*.assets'],
-  metaChunk: true
+  metaChunk: true,
+  base: '/repo/'
 })
