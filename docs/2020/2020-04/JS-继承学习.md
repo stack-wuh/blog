@@ -4,7 +4,7 @@
 
 原型链继承就是利用原型, 使类型A继承类型B的属性和方法
 
-```js
+```javascript
 function SuperN () {
     this.name = 'super_n'
     this.books = ['js', 'css', 'node']
