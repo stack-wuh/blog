@@ -112,19 +112,26 @@ const transformToNav = (menus) => {
     link: getHead('$AST')
   }
 
-  const koaNav = {
-    text: 'Koa',
-    link: getHead('$Koajs')
+  const blogNav = {
+    text: '博客',
+    link: getHead('$blog')
   }
 
-  const weeklyNav = {
-    text: '周报',
-    link: getHead('$weekSummary')
+  const otherNav = {
+    text: '日常',
+    items: [
+      {
+        text: 'koa.js',
+        link: getHead('$Koajs')
+      },
+      {
+        text: '工作周报',
+        link: getHead('$weekSummary')
+      }
+    ]
   }
 
-
-
-  return [indexNav, astNav, koaNav, weeklyNav]
+  return [indexNav, blogNav, astNav, otherNav]
 }
 
 const navGenerator = () => {

@@ -15,7 +15,8 @@ export default defineConfig({
     sidebar: {},
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/stack-wuh/blog/tree/gh-page' },
+      { icon: 'twitter', link: 'https://twitter.com/wuh131420' }
     ],
 
     footer: {
