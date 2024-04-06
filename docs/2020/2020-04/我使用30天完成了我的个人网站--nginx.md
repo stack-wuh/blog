@@ -47,7 +47,7 @@ whereis nginx
 
 主要就是location的拦截处理, 匹配所有有/api/的地址, 与项目的路由地址区分开, 命中规则的转发请求至localhost:3100中. 而转发的关键就是: *proxy_pass* 属性. 
 
-是不是很好奇, 我为什么会代理到3100端口呢, 小可爱? 因为我把express项目部署到了3100端口, 所以现在访问 *https://wuh.site/api/articles*, 实际访问的就是: *http://localhost:3100*
+是不是很好奇, 我为什么会代理到3100端口呢, 小可爱? 因为我把express项目部署到了3100端口, 所以现在访问 **https://wuh.site/api/articles**, 实际访问的就是: **http://localhost:3100**
 
 端口详情如下图:
 ![node.port]
