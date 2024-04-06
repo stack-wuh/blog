@@ -54,5 +54,6 @@ export default defineConfig({
   outDir: 'wiki.wuh.site',
   srcExclude: ['**/README.md', '**/*.js', '**/*.png', '**/*.assets'],
   metaChunk: true,
-  base: '/repo/'
+  base: '/repo/',
+  ignoreDeadLinks: true
 })
