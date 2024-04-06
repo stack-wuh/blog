@@ -1,0 +1,7 @@
+.vp-doc h2:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  border-bottom: 1px solid var(--vp-c-divider);
+  border-top: none;
+  padding-bottom: 16px;
+}

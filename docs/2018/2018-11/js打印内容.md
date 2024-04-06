@@ -34,5 +34,5 @@
 
 这个插件可以使用一下外联样式表, 可以在外部应用的时候加上print就可以使用外部的样式文件了
 ```html
-<link rel="stylesheet" href="/css/master.css" media="print" >
+<link rel="stylesheet" href="/css/master.css" media="print" />
 ```

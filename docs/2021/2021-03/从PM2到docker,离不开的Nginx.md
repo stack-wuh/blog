@@ -68,7 +68,7 @@ store  |              |
 ### 如何使用Docker启动项目
 github上有一个很不错的一个仓库[awesome-compose], 我选择的就是其中的一个模型, 在实际上线部署的时候, 慢慢的加入自己的配置. 现在Nextjs的官网都发布了Docker的示例, 实际用起来其实并不困难. 下面我贴一个Next的配置, 文件名 `Dockerfile`:
 
-```sheel
+```shell
 FROM mhart/alpine-node
 
 LABEL maintainer = "shadow <wuh131420@gmail.com>"

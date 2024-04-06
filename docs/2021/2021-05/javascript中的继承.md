@@ -62,7 +62,7 @@ SubType2.prototype = new SubType()
 
 在子类的构造函数中调用超类的构造函数，其实质是将超类绑定在this中的属性复制到子类中，只有在调用子类的构造函数时，才执行超类的构造函数，所以现在的参数问题得以解决，各个实例间不会互相影响。
 
-```jsvascript
+```javascript
 function Super (name) {
 	this.name = 'super' || name
 }
@@ -87,7 +87,7 @@ function Sub (name) {
 
 在重写了子类的原型后，Sup.prototype实质上指向了Super.prototype，在Sup.prototype.constructor指向的是Super，这里需要手动将Sub.prototype.constructor指向Sub。
 
-```jsvascript
+```javascript
 function Super (name) {
 	this.name = 'super' || name
 }
@@ -169,7 +169,7 @@ function inherit (o) {
 
 所以，开发人员一致认为寄生组合式继承是引用类型最理想的继承范式。
 
-```javasc
+```javascript
 function Super () {
 	this.name = 'super'
 }

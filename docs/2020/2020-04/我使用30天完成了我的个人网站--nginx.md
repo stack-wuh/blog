@@ -26,7 +26,7 @@
 
 ### 配置Nginx的反向代理
 在服务器安装了Nginx之后, 可以执行如下命令, 用于查看Nginx的安装位置: 
-```base
+```bash
 whereis nginx
 
 # /usr/local/nginx 这个就是我的安装位置
