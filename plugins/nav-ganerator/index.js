@@ -1,3 +1,21 @@
+const formatterSubtext = (filename) => {
+  const paths = filename.replace(/(\s|\$)/gi, '').split('/')
+
+  if (paths.length > 2) {
+    return paths.slice(2).join('-')
+  }
+
+  if (paths.length > 1) {
+    return paths.slice(1)
+  }
+
+  return filename
+}
+
+const formatterSubLink = (filename) => {
+  return '/' + filename.replace('.md', '')
+}
+
 const slideGroupByHead = (pages) => {
   const menus = {}
   const groups = pages.reduce((acc, curr) => {
@@ -15,24 +33,6 @@ const slideGroupByHead = (pages) => {
     return acc
   }, {})
 
-  const formatterSubtext = (filename) => {
-    const paths = filename.replace(/(\s|\$)/gi, '').split('/')
-
-    if (paths.length > 2) {
-      return paths.slice(2).join('-')
-    }
-
-    if (paths.length > 1) {
-      return paths.slice(1)
-    }
-
-    return filename
-  }
-
-  const formatterSubLink = (filename) => {
-    return '/' + filename.replace('.md', '')
-  }
-
   Object.entries(groups).map(([key, value]) => {
     let menuText = `/${key}/`
 
@@ -48,6 +48,7 @@ const slideGroupByHead = (pages) => {
   })
 
   menus['/$weekSummary/'].items = transformToWeekly(menus['/$weekSummary/'].items)
+  menus['/$blog/'] = transformToBlog(menus)
 
   return menus
 }
@@ -78,6 +79,21 @@ const transformToWeekly = (items = []) => {
   }
 
   return Object.values(itemsArgv)
+}
+
+const transformToBlog = (menus) => {
+  const blogKeys = Object.keys(menus).filter(c => c.startsWith('/20'))
+  let items = []
+
+  blogKeys.forEach(item => {
+    items = [].concat(items, menus[item].items)
+  })
+
+  return {
+    text: 'blog',
+    collapsed: true,
+    items: transformToWeekly(items.map(c => ({ text: formatterSubtext(c.text), link: formatterSubLink(c.link).replace('//', '/$blog/') })))
+  }
 }
 
 const transformToNav = (menus) => {
@@ -122,7 +138,6 @@ const navGenerator = () => {
       Reflect.deleteProperty(menus, '序言')
       vitepress.userConfig.themeConfig.sidebar = menus
       vitepress.userConfig.themeConfig.nav = transformToNav(menus)
-
     }
   }
 }

@@ -47,6 +47,9 @@ export default defineConfig({
   sitemap: {
     hostname: 'https://wuh.site'
   },
+  rewrites: {
+    '([0-9]{4})/(.*)': '$blog/([0-9]{4})/(.*)'
+  },
   outDir: 'blog.wuh.site',
   srcExclude: ['**/README.md', '**/*.js', '**/*.png', '**/*.assets'],
   metaChunk: true
