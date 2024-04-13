@@ -4,6 +4,8 @@
 
 ![image-20240413153801040](https://src.wuh.site/2024-04/2024-04-13-073812.png)
 
+![image-20240413170409041](https://src.wuh.site/2024-04/2024-04-13-090412.png)
+
 前面几个月一直在学习bebal、eslint这种AST相关的知识，一直没有时间去写一篇正儿八经的博客，刚好体验了一下vitepress，在这里记录一下我是如何使用vitepress将我的知识仓库[blog](https://github.com/stack-wuh/blog)做成**wiki**的。
 
 ![image-20240413153919880](https://src.wuh.site/2024-04/2024-04-13-073922.png)
@@ -193,3 +195,100 @@ const navGenerator = () => {
 但是分组多侧边栏这里有一个小坑要注意一下。
 
 ![image-20240413165641489](https://src.wuh.site/2024-04/2024-04-13-085645.png)
+
+以我的项目文档为例，最后生成的文档对应的对象应该是下面这样，我只截取一部分展示。
+
+![image-20240413170148327](https://src.wuh.site/2024-04/2024-04-13-090150.png)
+
+与生成sidebar同理，nav的数据也可以继续利用这种方法生成。最后的效果就是大家看到的封面图那样。
+
+### 三、自动构建发布
+
+继续利用我们之前介绍过的**github actions**帮助我们自动构建发布。同样在vitepress的官网中提供的一个[工作流示例](https://vitepress.dev/zh/guide/deploy#github-pages)。
+
+**github actions**是一个非常友好的工作流，在之前我已经写了一篇博客，详细地介绍了我是如何actions实现了我的博客项目自动构建发布，可以移步原文[Github Actions 自动部署应用](https://wuh.site/post/Github%20Actions%20%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8)。
+
+下面是我的[工作流配置文件](https://github.com/stack-wuh/blog/blob/gh-page/.github/workflows/deploy.yaml):
+
+```yaml
+# 构建 VitePress 站点并将其部署到 GitHub Pages 的示例工作流程
+#
+name: Deploy VitePress site to Pages
+
+on:
+  # 在针对 `main` 分支的推送上运行。如果你
+  # 使用 `master` 分支作为默认分支，请将其更改为 `master`
+  push:
+    branches: [gh-page]
+
+  # 允许你从 Actions 选项卡手动运行此工作流程
+  workflow_dispatch:
+
+# 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 只允许同时进行一次部署，跳过正在运行和最新队列之间的运行队列
+# 但是，不要取消正在进行的运行，因为我们希望允许这些生产部署完成
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  # 构建工作
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
+      - uses: pnpm/action-setup@v3 # 如果使用 pnpm，请取消注释
+        with:
+          version: 8
+      # - uses: oven-sh/setup-bun@v1 # 如果使用 Bun，请取消注释
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm # 或 pnpm / yarn
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      - name: Install dependencies
+        run: pnpm install # 或 pnpm install / yarn install / bun install
+      - name: Build with VitePress
+        run: pnpm run docs:build # 或 pnpm docs:build / yarn docs:build / bun run docs:build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/wiki.wuh.site
+
+  # 部署工作
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+```
+
+在使用**vitepress**搭建wiki库之前，先切一个**gh-page**分支出来，后期我们做自动构建主要是以这个分支为主，而不是master分支。
+
+注意，我们只需要改几处就可以使github正常工作了:
+
+1. 构建分支，将其改为gh-page
+2. 将打包器改为使用pnpm
+3. 将指令也改为pnpm配套指令
+4. 更改产出文件目录
+
+与此同时，项目内部的**config.mjs**文件产出目录也需要改一下，因为github pages的部署路由会自动在前面加上**/blog/**，所以项目的basePath也需要加一个前缀**/blog/**。
+
+到此为止，全部的流程就介绍完啦~~~
