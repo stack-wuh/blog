@@ -149,13 +149,13 @@ export default defineConfig({
 
 ```
 
-如果不出意外的话，在你执行**pnpm init **以及 **pnpm dev**之后，会出现由vitepress提供的默认页面。但是你的工作目录下的文件并没有自动生成菜单。
+如果不出意外的话，在你执行**pnpm init**以及 **pnpm dev**之后，会出现由vitepress提供的默认页面。但是你的工作目录下的文件并没有自动生成菜单。
 
 现在我们回到刚刚开始的问题，如何自动生成菜单和导航？
 
 有两种方法，第一种是常规方法，把路由一个个在**themeConfig.sidebar**中维护进去，还有一种是利用其编译时的能力，写一个vite插件，直接在编译时改掉vite上下文中的配置文件。
 
-大家回到**config.mjs**文件中，仔细看一下我在**vite**中配置了一个插件**[navGenerator](https://github.com/stack-wuh/blog/blob/gh-page/plugins/nav-ganerator/index.js)**。在这个插件中我们只需要将文件路径转化为路由地址就可以了，然后在vite的上下文中的themeConfig.sidebar 改写为我们重新生成的对象就可以了。
+大家回到**config.mjs**文件中，仔细看一下我在**vite**中配置了一个插件[navGenerator](https://github.com/stack-wuh/blog/blob/gh-page/plugins/nav-ganerator/index.js)。在这个插件中我们只需要将文件路径转化为路由地址就可以了，然后在vite的上下文中的themeConfig.sidebar 改写为我们重新生成的对象就可以了。
 
 ```javascript
 const navGenerator = () => {
@@ -184,7 +184,7 @@ const navGenerator = () => {
 
 正好**configResolved**钩子是最前面的那个入口，而且在此时vitepress已经完成了目录的解析，在此时我们已经可以非常完整地拿到工作目录下全部的md文件了。
 
-插件的全部代码可以点击链接在github中的**[plugins/nav-generator](https://github.com/stack-wuh/blog/blob/gh-page/plugins/nav-ganerator/index.js)**查看。
+插件的全部代码可以点击链接在github中的[plugins/nav-generator](https://github.com/stack-wuh/blog/blob/gh-page/plugins/nav-ganerator/index.js)查看。
 
 
 
@@ -289,6 +289,6 @@ jobs:
 3. 将指令也改为pnpm配套指令
 4. 更改产出文件目录
 
-与此同时，项目内部的**config.mjs**文件产出目录也需要改一下，因为github pages的部署路由会自动在前面加上**/blog/**，所以项目的basePath也需要加一个前缀**/blog/**。
+与此同时，项目内部的**config.mjs**文件产出目录也需要改一下，因为github pages的部署路由会自动在前面加上/blog/，所以项目的basePath也需要加一个前缀/blog/。
 
 到此为止，全部的流程就介绍完啦~~~
