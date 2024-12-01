@@ -2,3 +2,6 @@
 /_book
 .DS_Store
 /docs/wiki.wuh.site
+/docs/.vitepress
+/docs/.vitepress/cache
+/docs/.vitepress
