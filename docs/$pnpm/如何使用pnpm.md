@@ -54,3 +54,13 @@ pnpm add react --filter package-name -D
 二、工程化配置
 
 同npm一样，pnpm init，会自动生成一个package.json文件，跟npm一样。
+
+先确定一下整个工程的结构，全部的子项目都在packages目录下，然后在pnpm-workspaces.yaml里面维护一下。
+
+
+
+![image-20241208173114701](https://src.wuh.site/2024-11/2024-12-08-093146.png)
+
+在packages目录下的每一个子项目都需要执行一次pnpm init，生成一个package.json文件。
+
+在将子项目添加到根目录的说明文件下的时候，需要配置一下.npmrc文件，让pnpm优先使用本地包，否则npm会报出404错误。
