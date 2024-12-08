@@ -64,3 +64,7 @@ pnpm add react --filter package-name -D
 在packages目录下的每一个子项目都需要执行一次pnpm init，生成一个package.json文件。
 
 在将子项目添加到根目录的说明文件下的时候，需要配置一下.npmrc文件，让pnpm优先使用本地包，否则npm会报出404错误。
+
+
+
+这里贴一个nextjs的monorepo实现[nextjs-sharing-code-monorepo](https://github.com/cpvdeveloper/nextjs-sharing-code-monorepo/tree/main/packages)
