@@ -57,3 +57,7 @@ $ docker exec -it mongodb.service bash
 
 
 运维服务: https://m-zhoujie2.gitbooks.io/-linux-devops-2/content/chapter1-1.html
+
+
+
+mongodb://docs:docs%40123321..@8.153.72.27:27017/?authSource=blog
