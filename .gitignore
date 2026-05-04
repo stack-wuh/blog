@@ -1,7 +1,7 @@
 /node_modules
 /_book
 .DS_Store
-/docs/wiki.wuh.site
+/docs/dist
 /docs/.vitepress
 /docs/.vitepress/cache
 /docs/.vitepress

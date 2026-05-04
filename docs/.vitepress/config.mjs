@@ -70,7 +70,7 @@ export default defineConfig({
   rewrites: {
     '([0-9]{4})/(.*)': '$blog/([0-9]{4})/(.*)'
   },
-  outDir: 'wiki.wuh.site',
+  outDir: 'dist',
   srcExclude: ['**/README.md', '**/*.js', '**/*.png', '**/*.assets'],
   metaChunk: true,
   base: '/blog/',
