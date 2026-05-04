@@ -1,7 +1,310 @@
+/* ===== Claude.ai 风格主题 ===== */
+
+/* ----- 暗色模式（默认） ----- */
+:root {
+  /* 品牌色 — claude.ai 琥珀 */
+  --vp-c-brand-1: #D97706;
+  --vp-c-brand-2: #E07B2C;
+  --vp-c-brand-3: #B45309;
+  --vp-c-brand-soft: rgba(217, 119, 6, 0.14);
+
+  /* 背景 */
+  --vp-c-bg: #0D0D0D;
+  --vp-c-bg-alt: #141414;
+  --vp-c-bg-elv: #1A1A1A;
+  --vp-c-bg-soft: #1A1A1A;
+
+  /* 边框 & 分割线 */
+  --vp-c-border: #2A2A2A;
+  --vp-c-divider: #2A2A2A;
+  --vp-c-gutter: #1A1A1A;
+
+  /* 文字 */
+  --vp-c-text-1: #ECECEC;
+  --vp-c-text-2: #9CA3AF;
+  --vp-c-text-3: #6B7280;
+
+  /* 代码块 */
+  --vp-code-block-bg: #1E1E1E;
+  --vp-code-line-height: 1.65;
+  --vp-code-font-size: 0.875em;
+  --vp-code-block-color: #ECECEC;
+  --vp-code-block-divider-color: #2A2A2A;
+  --vp-code-copy-code-bg: rgba(255, 255, 255, 0.05);
+  --vp-code-copy-code-hover-bg: rgba(255, 255, 255, 0.1);
+  --vp-code-copy-code-active-text: #9CA3AF;
+  --vp-code-tab-text-color: #6B7280;
+  --vp-code-tab-hover-text-color: #ECECEC;
+  --vp-code-tab-active-text-color: var(--vp-c-brand-1);
+  --vp-code-tab-bg: #1E1E1E;
+  --vp-code-tab-active-bg: #1E1E1E;
+  --vp-code-tab-divider: var(--vp-c-border);
+  --vp-code-lang-color: #6B7280;
+
+  /* 内联代码 */
+  --vp-c-text-code: #D97706;
+
+  /* 链接 */
+  --vp-c-text-light-1: #D97706;
+
+  /* 按钮 */
+  --vp-button-brand-bg: #D97706;
+  --vp-button-brand-hover-bg: #E07B2C;
+  --vp-button-brand-active-bg: #B45309;
+  --vp-button-brand-text: #fff;
+
+  --vp-button-alt-bg: #212121;
+  --vp-button-alt-hover-bg: #2A2A2A;
+  --vp-button-alt-text: #ECECEC;
+
+  --vp-button-sponsor-bg: #D97706;
+  --vp-button-sponsor-text: #fff;
+
+  /* 首页 Hero */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(135deg, #D97706 0%, #F59E0B 100%);
+  --vp-home-hero-image-background-image: linear-gradient(135deg, #D97706 0%, #F59E0B 100%);
+  --vp-home-hero-image-filter: blur(72px);
+
+  /* 自定义块 (tip/warning/danger/details) */
+  --vp-c-tip-1: #D97706;
+  --vp-c-tip-2: #E07B2C;
+  --vp-c-tip-3: #B45309;
+  --vp-c-tip-soft: rgba(217, 119, 6, 0.12);
+
+  --vp-c-warning-1: #F59E0B;
+  --vp-c-warning-2: #D97706;
+  --vp-c-warning-3: #B45309;
+  --vp-c-warning-soft: rgba(245, 158, 11, 0.12);
+
+  --vp-c-danger-1: #EF4444;
+  --vp-c-danger-2: #DC2626;
+  --vp-c-danger-3: #B91C1C;
+  --vp-c-danger-soft: rgba(239, 68, 68, 0.12);
+
+  --vp-c-info-1: #3B82F6;
+  --vp-c-info-2: #2563EB;
+  --vp-c-info-3: #1D4ED8;
+  --vp-c-info-soft: rgba(59, 130, 246, 0.12);
+
+  --vp-c-details-1: #3B82F6;
+  --vp-c-details-2: #2563EB;
+  --vp-c-details-3: #1D4ED8;
+  --vp-c-details-soft: rgba(59, 130, 246, 0.12);
+
+  /* Custom block 通用 */
+  --vp-custom-block-font-size: 0.875rem;
+  --vp-custom-block-code-font-size: 0.8125rem;
+  --vp-code-block-bg-light: #F5F5F5;
+  --vp-code-block-bg-lighter: #FAFAFA;
+
+  /* Badge */
+  --vp-badge-tip-border: #D97706;
+  --vp-badge-tip-text: #D97706;
+  --vp-badge-tip-bg: rgba(217, 119, 6, 0.12);
+
+  --vp-badge-warning-border: #F59E0B;
+  --vp-badge-warning-text: #F59E0B;
+  --vp-badge-warning-bg: rgba(245, 158, 11, 0.12);
+
+  --vp-badge-danger-border: #EF4444;
+  --vp-badge-danger-text: #EF4444;
+  --vp-badge-danger-bg: rgba(239, 68, 68, 0.12);
+
+  --vp-badge-info-border: #3B82F6;
+  --vp-badge-info-text: #3B82F6;
+  --vp-badge-info-bg: rgba(59, 130, 246, 0.12);
+
+  /* 侧边栏 */
+  --vp-sidebar-bg: #0D0D0D;
+
+  /* Nav */
+  --vp-nav-bg: rgba(13, 13, 13, 0.85);
+  --vp-nav-screen-bg: #0D0D0D;
+
+  /* 本地搜索 */
+  --vp-local-search-bg: #1A1A1A;
+  --vp-local-search-result-bg: #141414;
+  --vp-local-search-result-selected-bg: #212121;
+  --vp-local-search-highlight-bg: rgba(217, 119, 6, 0.25);
+  --vp-local-search-highlight-text: #D97706;
+
+  /* 滚动条 */
+  scrollbar-color: #2A2A2A #0D0D0D;
+
+  /* 排版 */
+  --vp-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --vp-font-family-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", Menlo, monospace;
+}
+
+/* ----- 亮色模式 ----- */
+:root:not(.dark) {
+  --vp-c-brand-1: #D97706;
+  --vp-c-brand-2: #C5610B;
+  --vp-c-brand-3: #9A4207;
+  --vp-c-brand-soft: rgba(217, 119, 6, 0.1);
+
+  /* 背景 */
+  --vp-c-bg: #FAFAFA;
+  --vp-c-bg-alt: #F5F5F5;
+  --vp-c-bg-elv: #FFFFFF;
+  --vp-c-bg-soft: #F5F5F5;
+
+  /* 边框 & 分割线 */
+  --vp-c-border: #E5E5E5;
+  --vp-c-divider: #E5E5E5;
+  --vp-c-gutter: #F5F5F5;
+
+  /* 文字 */
+  --vp-c-text-1: #1A1A1A;
+  --vp-c-text-2: #6B7280;
+  --vp-c-text-3: #9CA3AF;
+
+  /* 代码块 */
+  --vp-code-block-bg: #F5F5F5;
+  --vp-code-block-color: #1A1A1A;
+  --vp-code-copy-code-bg: rgba(0, 0, 0, 0.04);
+  --vp-code-copy-code-hover-bg: rgba(0, 0, 0, 0.08);
+  --vp-code-tab-bg: #F5F5F5;
+  --vp-code-tab-active-bg: #F5F5F5;
+  --vp-code-tab-text-color: #9CA3AF;
+  --vp-code-tab-hover-text-color: #1A1A1A;
+  --vp-code-lang-color: #9CA3AF;
+
+  /* 内联代码 */
+  --vp-c-text-code: #D97706;
+
+  /* 链接 */
+  --vp-c-text-light-1: #B45309;
+
+  /* 按钮 */
+  --vp-button-brand-bg: #D97706;
+  --vp-button-brand-hover-bg: #C5610B;
+  --vp-button-brand-active-bg: #9A4207;
+  --vp-button-brand-text: #fff;
+
+  --vp-button-alt-bg: #E5E5E5;
+  --vp-button-alt-hover-bg: #D4D4D4;
+  --vp-button-alt-text: #1A1A1A;
+
+  /* 自定义块 */
+  --vp-c-tip-1: #D97706;
+  --vp-c-tip-2: #C5610B;
+  --vp-c-tip-3: #9A4207;
+  --vp-c-tip-soft: rgba(217, 119, 6, 0.08);
+
+  --vp-c-warning-1: #F59E0B;
+  --vp-c-warning-2: #D97706;
+  --vp-c-warning-3: #B45309;
+  --vp-c-warning-soft: rgba(245, 158, 11, 0.08);
+
+  --vp-c-danger-1: #DC2626;
+  --vp-c-danger-2: #B91C1C;
+  --vp-c-danger-3: #991B1B;
+  --vp-c-danger-soft: rgba(220, 38, 38, 0.08);
+
+  --vp-c-info-1: #2563EB;
+  --vp-c-info-2: #1D4ED8;
+  --vp-c-info-3: #1E40AF;
+  --vp-c-info-soft: rgba(37, 99, 235, 0.08);
+
+  --vp-c-details-1: #2563EB;
+  --vp-c-details-2: #1D4ED8;
+  --vp-c-details-3: #1E40AF;
+  --vp-c-details-soft: rgba(37, 99, 235, 0.08);
+
+  /* Badge */
+  --vp-badge-tip-border: #D97706;
+  --vp-badge-tip-text: #D97706;
+  --vp-badge-tip-bg: rgba(217, 119, 6, 0.08);
+
+  --vp-badge-warning-border: #F59E0B;
+  --vp-badge-warning-text: #D97706;
+  --vp-badge-warning-bg: rgba(245, 158, 11, 0.08);
+
+  --vp-badge-danger-border: #DC2626;
+  --vp-badge-danger-text: #DC2626;
+  --vp-badge-danger-bg: rgba(220, 38, 38, 0.08);
+
+  --vp-badge-info-border: #2563EB;
+  --vp-badge-info-text: #2563EB;
+  --vp-badge-info-bg: rgba(37, 99, 235, 0.08);
+
+  /* 侧边栏 */
+  --vp-sidebar-bg: #FAFAFA;
+
+  /* Nav */
+  --vp-nav-bg: rgba(250, 250, 250, 0.85);
+  --vp-nav-screen-bg: #FAFAFA;
+
+  /* 本地搜索 */
+  --vp-local-search-bg: #FFFFFF;
+  --vp-local-search-result-bg: #FAFAFA;
+  --vp-local-search-result-selected-bg: #F0F0F0;
+  --vp-local-search-highlight-bg: rgba(217, 119, 6, 0.15);
+  --vp-local-search-highlight-text: #B45309;
+
+  /* 滚动条 */
+  scrollbar-color: #D4D4D4 #FAFAFA;
+}
+
+/* ----- 微调 ----- */
+
+/* h2 顶部间距 */
 .vp-doc h2:first-of-type {
   margin-top: 0;
   padding-top: 0;
   border-bottom: 1px solid var(--vp-c-divider);
   border-top: none;
   padding-bottom: 16px;
+}
+
+/* 代码块圆角 */
+.vp-doc div[class*='language-'] {
+  border-radius: 8px;
+}
+
+/* 内联代码圆角 */
+.vp-doc :not(pre) > code {
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.875em;
+}
+
+/* 链接悬停 */
+.vp-doc a:hover {
+  color: var(--vp-c-brand-2);
+}
+
+/* 表格优化 */
+.vp-doc table {
+  border-radius: 6px;
+}
+
+.vp-doc tr:nth-child(even) {
+  background: var(--vp-c-bg-soft);
+}
+
+/* blockquote */
+.vp-doc blockquote {
+  border-left-color: var(--vp-c-brand-1);
+}
+
+/* 滚动条 WebKit fallback */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vp-c-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
 }
