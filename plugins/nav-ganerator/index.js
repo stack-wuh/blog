@@ -79,10 +79,13 @@ const transformToWeekly = (items = []) => {
   }
 
   return Object.values(itemsArgv)
+    .map(group => ({ ...group, items: group.items.reverse() }))
+    .sort((a, b) => b.text.localeCompare(a.text))
 }
 
 const transformToBlog = (menus) => {
   const blogKeys = Object.keys(menus).filter(c => c.startsWith('/20'))
+  blogKeys.sort((a, b) => b.localeCompare(a))
   let items = []
 
   blogKeys.forEach(item => {
