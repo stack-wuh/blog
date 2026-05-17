@@ -1,0 +1,1 @@
+![openspec-superpowers-workflow.html](/Users/wuhong/shadow-desktop/github/blog/docs/2026/2026-05/assets/openspec-superpowers-workflow.html.png)
