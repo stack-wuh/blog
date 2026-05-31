@@ -1,14 +1,16 @@
-## 使用vitepress搭建wiki
+## 使用 VitePress 搭建 Wiki
 
+> **摘要：** 用 VitePress 搭建个人 wiki，通过自定义 Vite 插件自动生成 sidebar 和 nav，配合 GitHub Actions 自动构建发布。
 
+---
 
-![image-20240413153801040](https://src.wuh.site/2024-04/2024-04-13-073812.png)
+![image-20240413153801040](https://cdn.wuh.site/2024-04/2024-04-13-073812.png)
 
-![image-20240413170409041](https://src.wuh.site/2024-04/2024-04-13-090412.png)
+![image-20240413170409041](https://cdn.wuh.site/2024-04/2024-04-13-090412.png)
 
 前面几个月一直在学习bebal、eslint这种AST相关的知识，一直没有时间去写一篇正儿八经的博客，刚好体验了一下vitepress，在这里记录一下我是如何使用vitepress将我的知识仓库[blog](https://github.com/stack-wuh/blog)做成**wiki**的。
 
-![image-20240413153919880](https://src.wuh.site/2024-04/2024-04-13-073922.png)
+![image-20240413153919880](https://cdn.wuh.site/2024-04/2024-04-13-073922.png)
 
 先展示一下我的文件目录结构，所有文件全部放在**docs**目录下，例如AST、Koa和工作周报这种比较特殊的文件夹是以关键字命名，剩余的博客全部是以年份，年份-月份，年份-月份-博客标题方式命名。
 
@@ -55,10 +57,10 @@ features:
     link: /$blog/2021/2021-05/搬山计划.html
   - title: 2022年度总结
     details: 每年年中发布一次的年度总结
-    icon: { src: 'https://src.wuh.site/2022-02/2022-02-08-124302.png', width: '120px', height: '120px' }
+    icon: { src: 'https://cdn.wuh.site/2022-02/2022-02-08-124302.png', width: '120px', height: '120px' }
     link: /$blog/2022/2022-01/2022年度总结.html
   - title: 进取
-    icon: { src: 'https://src.wuh.site/2022-09/20220901.001.png', width: '120px', height: '120px' }
+    icon: { src: 'https://cdn.wuh.site/2022-09/20220901.001.png', width: '120px', height: '120px' }
     details: 静以修身，俭以养德。勿以善小而不为，勿以恶小而为之。
     link: /$blog/2022/2022-09/进取.html
 ---
@@ -186,21 +188,23 @@ const navGenerator = () => {
 
 插件的全部代码可以点击链接在github中的[plugins/nav-generator](https://github.com/stack-wuh/blog/blob/gh-page/plugins/nav-ganerator/index.js)查看。
 
-
+---
 
 ### 二、如何正确维护多分组sidebar
 
-![image-20240413165436184](https://src.wuh.site/2024-04/2024-04-13-085439.png)
+![image-20240413165436184](https://cdn.wuh.site/2024-04/2024-04-13-085439.png)
 
 但是分组多侧边栏这里有一个小坑要注意一下。
 
-![image-20240413165641489](https://src.wuh.site/2024-04/2024-04-13-085645.png)
+![image-20240413165641489](https://cdn.wuh.site/2024-04/2024-04-13-085645.png)
 
 以我的项目文档为例，最后生成的文档对应的对象应该是下面这样，我只截取一部分展示。
 
-![image-20240413170148327](https://src.wuh.site/2024-04/2024-04-13-090150.png)
+![image-20240413170148327](https://cdn.wuh.site/2024-04/2024-04-13-090150.png)
 
 与生成sidebar同理，nav的数据也可以继续利用这种方法生成。最后的效果就是大家看到的封面图那样。
+
+---
 
 ### 三、自动构建发布
 

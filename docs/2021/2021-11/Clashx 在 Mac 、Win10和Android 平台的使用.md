@@ -1,6 +1,10 @@
-## ClashX 的使用记录
+## ClashX 在 Mac、Win10 和 Android 平台的使用
 
-![](https://src.wuh.site/2021-12/2021-12-05-021507.png)
+> **摘要：** ClashX 在三个平台的使用方法：Mac 上零配置、Win10 需配合 SwitchyOmega 插件、Android 直接导入订阅地址。
+
+---
+
+![](https://cdn.wuh.site/2021-12/2021-12-05-021507.png)
 
 我之前用的是google浏览器的的一个插件，大多数朋友可能都有用过，就是**GHelper**。
 
@@ -23,12 +27,16 @@
 
 最后，附上clashx在Mac平台的下载地址[clashX][1]，版本号是**1.72.0**。在Mac上使用极其简单的，几乎没有费什么工夫就成功的跑了起来，完全没有遇到什么麻烦。
 
+---
+
 ### window10 的 Clash
 在window平台的上的客户端不再是ClashX，而是Clash。都是一家人没什么太大的区别，都是基于go。不得不说，在各个平台使用Clash都很简单，几乎没遇到什么大的麻烦，但是在window上需要多处理一点。
 
 在这里附上Clash的下载地址[clash_for_window][2](https://github.com/Fndroid/clash\_for\_windows\_pkg/releases)。该链接来自于**github**，请放心使用。
 
 首先，如果没有买飞机票，请先交保护费买一张飞机票，获得clash的订阅地址。另外还需要给google浏览器装一个插件**Proxy switchyOmega**。
+
+---
 
 ### Android 的 Clash
 第一贴上[clash_for_android][3]的下载地址：https://github.com/Kr328/ClashForAndroid/releases，该链接来自于**github**，请放心使用。
@@ -57,7 +65,7 @@
 [5]:	https://youyun222.net/user "优云666"
 [6]:	http://www.caogon.com/auth/register "飞世云"
 
-[image-1]:	https://src.wuh.site/2021-08/2021-12-04-020018.jpg
-[image-2]:	https://src.wuh.site/2021-12/2021-12-04-024157.png
-[image-3]:	https://src.wuh.site/2021-12/2021-12-04-2021120402.png
-[image-4]:	https://src.wuh.site/2021-12/2021-12-04-20211120403.png
+[image-1]:	https://cdn.wuh.site/2021-08/2021-12-04-020018.jpg
+[image-2]:	https://cdn.wuh.site/2021-12/2021-12-04-024157.png
+[image-3]:	https://cdn.wuh.site/2021-12/2021-12-04-2021120402.png
+[image-4]:	https://cdn.wuh.site/2021-12/2021-12-04-20211120403.png

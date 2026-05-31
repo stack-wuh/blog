@@ -1,6 +1,8 @@
-## 使用docker部署mongodb服务
+## 使用 Docker 部署 MongoDB 服务
 
+> **摘要：** 使用 Docker 部署 MongoDB 时遇到的四个常见问题：镜像拉取超时、脚本自动化、Docker daemon 连接错误、容器内新增权限用户。
 
+---
 
 使用镜像 docker pull mongodb/mongodb-community-server
 
@@ -8,7 +10,7 @@
 
 问题一：拉取镜像文件超时
 
-![image-20241116104439975](https://src.wuh.site/2024-10/2024-11-16-024447.png)
+![image-20241116104439975](https://cdn.wuh.site/2024-10/2024-11-16-024447.png)
 
 解决：
 

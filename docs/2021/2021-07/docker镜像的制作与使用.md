@@ -1,8 +1,12 @@
 
 
-## Docker镜像的制作与使用
+## Docker 镜像的制作与使用
 
-![docker-hub](https://src.wuh.site/2021-08/2021-08-29-090210.png)
+> **摘要：** 将镜像编译从服务器迁移到本地，通过本地制作 → 推送 Docker Hub → 服务器拉取更新的流水线实现部署。
+
+---
+
+![docker-hub](https://cdn.wuh.site/2021-08/2021-08-29-090210.png)
 
 最近github的速度是在是太慢了，实在是受不了了，所以只好把镜像的编译工作放在了本地。在本地制作镜像然后托管到dockerhub，直接使用线上镜像了。
 
@@ -84,6 +88,8 @@ docker build -t 'shadowu/wuh.site:latest' -t 'shadowu/wuh.site:'$version
 
 镜像的文件制作``Dockerfile`，可以访问我之前写过的一篇[《从PM2到docker, 离不开的Nginx》](https://wuh.site/post/2021-03/%E4%BB%8EPM2%E5%88%B0docker%2C%20%E7%A6%BB%E4%B8%8D%E5%BC%80%E7%9A%84Nginx),不用写太多，简单制作一下，先让项目可以用docker跑起来，其他的再说。
 
+---
+
 ### docker-compose
 
 在很早之前，docker-compose还是需要单独安装，但在更新了docker的版本后，docker-cli里面集成了docker-compose，相当的方便，我在[项目的描述文件](https://github.com/stack-wuh/react-router-config#readme)里面记录了两种启动容器的方式。一种是用docker-compose 启动本地制作镜像，另一种是docker启动线上镜像。
@@ -142,6 +148,8 @@ services:
 
 你永远可以使用且可以只使用 **docker-compose up -d** 指令，来完成你想完成的任意操作。
 
+---
+
 ### Bash
 
 首先，介绍一下有关bash相关的教程[《Bash脚本教程》](https://wangdoc.com/bash/startup.html#%E7%99%BB%E5%BD%95-session)(来自于阮老师的教程，链接地址直接指向了Bash的启动环境篇)。
@@ -162,11 +170,11 @@ $ password
 
 能力有限，原理我说不清，感兴趣的自己百度。
 
-
+---
 
 ### 执行结果与相关问题
 
-![result](https://src.wuh.site/2021-08/2021-08-29-101747.png)
+![result](https://cdn.wuh.site/2021-08/2021-08-29-101747.png)
 
 执行脚本之后，能够正常的走到这一步说明没有遇到问题，而且已经推送成功了。
 
@@ -180,13 +188,13 @@ $ password
 
 4. docker-hub设置为公共源，才可以用到一些三方工具，比如生成一个icon标签放在github上面。
 
-   ![github-icon-label](https://src.wuh.site/2021-08/2021-08-29-102935.png)
+   ![github-icon-label](https://cdn.wuh.site/2021-08/2021-08-29-102935.png)
 
 5. 注意nodejs的版本，有很多莫名的问题是nodejs的版本带来的问题，linux上可以使用的`n`这个工具，可以快速的切换nodejs的版本
 
 6. `WORKDIR`是指app在容器里面运行的文件目录，在遇到镜像可以正常制作，但是容器死活起不来的时候，可以减掉一些镜像文件的配置项，进入到容器里面去看一下究竟遇到了什么问题
 
-
+---
 
 ### docker的常用指令
 
@@ -198,6 +206,8 @@ $ password
 + `docker run`和`docker create` 在创建容器的时候，其实没啥大区别，需要注意的是，最好加上`-it`配置，在容器正常启动后会返回容器id
 + 就用`docker-compose`，有了它一切变得简单起来
 
+---
+
 ### 工具
 
  [Docker Desktop](https://www.docker.com/products/docker-desktop)
@@ -206,19 +216,18 @@ $ password
 
 1. 可以相当直观的看到现在使用的机器上面镜像和运行的容器
 
-![desktop-about](https://src.wuh.site/2021-08/2021-08-29-105910.png)
+![desktop-about](https://cdn.wuh.site/2021-08/2021-08-29-105910.png)
 
 2. 可以看到目前容器占用的资源
 
-   ![desktop-memery](https://src.wuh.site/2021-08/2021-08-29-110020.png)
+   ![desktop-memery](https://cdn.wuh.site/2021-08/2021-08-29-110020.png)
 
 3. 可以看到一些变量属性
 
-![desktop-env](https://src.wuh.site/2021-08/2021-08-29-110035.png)
+![desktop-env](https://cdn.wuh.site/2021-08/2021-08-29-110035.png)
 
 4. 可以快速布置k8s任务
 
 
 
 ======= 分割线以下是更新内容 =======
-
