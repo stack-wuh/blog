@@ -1,6 +1,10 @@
-## 认识Github Actions
+## Github Actions 入门
 
-![](https://src.wuh.site/2021-12/2021-12-13-135531.png)
+> **摘要：** Github Actions 的本质是事件驱动的自动化工作流，配合 Docker 可以实现镜像自动编译推送和 Release 版本管理。
+
+---
+
+![](https://cdn.wuh.site/2021-12/2021-12-13-135531.png)
 
 > 什么是github actions? 我们可以使用github actions做一些什么事情?怎么实现我们的需求?
 
@@ -57,9 +61,9 @@ jobs:
 
 不出意外，其执行成功的结果就是这个样子:
 
-![](https://src.wuh.site/2021-12/2021-12-06-125421.jpg)
+![](https://cdn.wuh.site/2021-12/2021-12-06-125421.jpg)
 
-
+---
 
 ### 文件的结构分析
 
@@ -134,7 +138,7 @@ jobs:
 | macOS Big Sur 11     | macos-11       |
 | macOS Catalina 10.15 | macos-latest   |
 
-
+---
 
 ### Docker 的自动编译和推送
 
@@ -147,6 +151,8 @@ jobs:
 1. docker/login-action 登录用，只有登录状态下才可以推送镜像
 2. docker/metadata-actions 配置image的版本号
 3. docker/build-push-action 编译和推送
+
+---
 
 ### Release 版本更新
 

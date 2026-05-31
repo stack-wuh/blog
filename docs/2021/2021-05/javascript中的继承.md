@@ -1,10 +1,12 @@
-## javascript中的继承
+## JavaScript 中的继承
+
+> **摘要：** JS 继承方案从原型链、构造函数、组合、原型式、寄生式到寄生组合的演进，ES6 的 class extends 本质仍是寄生组合继承的语法糖。
+
+---
 
 这两天没事，在翻看红宝书的继承篇，重新学习了一下下js中的继承。出于对Es6中class 类继承的好奇，我在babel里面试了一下，才发现Es6中class类继承，实际是寄生组合式继承，也是一下我要介绍的一种， 如图：
 
-![](https://src.wuh.site/2021-05/2021-05-10-081908.png)
-
-
+![](https://cdn.wuh.site/2021-05/2021-05-10-081908.png)
 
 在红宝书中主要介绍了一下5中实现继承的方案：
 
@@ -54,6 +56,8 @@ SubType2.prototype = new SubType()
 3. 不能使用对象字面量去创建原型方法，因为使用字面量后实质上是重写了原型链，切断与原来的原型链之间的联系。
 4. 没有办法在不影响全部实例的前提下，给超类的构造函数传递参数。
 
+---
+
 ### 借用构造函数
 
 在子类的构造函数中调用超类的构造函数，即为借用构造函数的基本原理。详情查看例子[借用构造函数][constructor]
@@ -79,7 +83,7 @@ function Sub (name) {
 2. 但是，在解决了复杂类型值的问题之后，借用构造函数又有一个新的问题。属性和方法全部绑定在this上面，所以只能在构造函数内部继续声明其他的属性和方法，**扩展性降低。**
 3. 同时，在超类的原型中定义的属性，对于子类而言不可见。**所以必须在超类的构造函数中声明属性。**
 
-
+---
 
 ### 组合继承
 
@@ -109,7 +113,7 @@ Sub.prototype.constructor = Sub
 
 1. 组合继承唯一一点就是需要两次调用超类的构造函数。
 
-
+---
 
 ### 原型式继承
 
@@ -132,7 +136,7 @@ function object (o) {
 1. 其复杂类型值的问题，如同原型链继承一样，会被每一个实例共享
 2. 在es5中，已经新增Object.create方法，其效果与object方法一致
 
-
+---
 
 ### 寄生式继承
 
@@ -157,7 +161,7 @@ function inherit (o) {
 
 1. 其缺点与借用构造函数相似，其封装过程全部在函数内部，没有办法进行扩展。
 
-
+---
 
 ### 寄生组合式继承
 
@@ -173,14 +177,14 @@ function inherit (o) {
 function Super () {
 	this.name = 'super'
 }
-Super.ptototype.getName = function () {  return this.name }
+Super.prototype.getName = function () {  return this.name }
 
 function Sub () {
 	this.subname = 'sub'
 }
 
 function inherit (subType, SuperType) {
-	const prototype = object(SuperType)
+	const prototype = object(SuperType.prototype)
 	prototype.constructor = subType
 	subType.prototype = prototype
 	
@@ -191,6 +195,8 @@ inherit(Sub, Super)
 ```
 
 可以回到顶部，查看babel对class类继承实现的转换，仔细一对比，发现其实没有什么大的不同，从实现思想上来说是一致的。
+
+---
 
 ### Class 与 extends
 
@@ -214,6 +220,8 @@ class Child extends Parent {
 2. 子类的`__proto__`属性，表示构造函数的继承，总是指向父类。 `Child.__proto__ === Parent`
 3. 子类prototype中的`__proto__`，表示方法的继承，总是指向父类的`prototype`。  `Child.prototype.__proto__ === Parent.prototype`
 4. 在类继承中，`__proto__`属性是层层嵌套的，子类的`__proto__`属性的`__proto__`属性指向的就是父类的`__proto__`。 `Child.__proto__.__proto__ === Parent.__proto__`
+
+---
 
 ### 总结
 
