@@ -3,7 +3,7 @@
     "docs:dev": "vitepress dev docs --port 4000",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs --port 4400",
-    "publish": "tsx scripts/publish.ts"
+    "post": "tsx scripts/publish.ts"
   },
   "dependencies": {
     "@octokit/rest": "^21.0.0",

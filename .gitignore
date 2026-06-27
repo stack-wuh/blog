@@ -5,3 +5,4 @@
 /docs/.vitepress
 /docs/.vitepress/cache
 /docs/.vitepress
+.env
