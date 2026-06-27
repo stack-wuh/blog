@@ -1,0 +1,28 @@
+schema: spec-driven
+
+context: |
+  技术栈: TypeScript, Node.js, VitePress, Octokit (GitHub API)
+  仓库: stack-wuh/blog, 个人 wiki/博客, VitePress 构建 + GitHub Pages 部署
+  GitHub Issues 作为 CMS (x.wuh.site 消费)
+  包管理器: pnpm
+
+rules:
+  proposal:
+    - 变更名称使用 {yyyyMMDD}_{P|B}_{project_name} 格式
+    - 明确说明变更的原因和范围
+    - 文档输出使用中文
+  branch:
+    - 功能分支命名: {type}-{short-description}
+    - type 取值: feat / fix / refactor / docs / chore
+    - short-description 使用中文, 2-5 字
+  specs:
+    - 使用 ## ADDED / ## MODIFIED / ## REMOVED / ## RENAMED 标记需求变更
+    - 每个 Requirement 用 GIVEN/WHEN/THEN 格式描述场景
+    - 文档输出使用中文
+  design:
+    - 技术方案需说明对现有模块的影响
+    - 文档输出使用中文
+  tasks:
+    - 按 Phase 组织，每个 task 控制在 2 小时以内
+    - 标注每个 task 涉及的文件路径
+    - 文档输出使用中文
