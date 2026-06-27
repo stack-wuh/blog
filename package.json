@@ -2,11 +2,18 @@
   "scripts": {
     "docs:dev": "vitepress dev docs --port 4000",
     "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs --port 4400"
+    "docs:preview": "vitepress preview docs --port 4400",
+    "publish": "tsx scripts/publish.ts"
+  },
+  "dependencies": {
+    "@octokit/rest": "^21.0.0",
+    "gray-matter": "^4.0.3"
   },
   "devDependencies": {
+    "@types/node": "^22.0.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vitejs/plugin-vue-jsx": "^3.1.0",
+    "tsx": "^4.0.0",
     "vitepress": "^1.6.4"
   }
 }
