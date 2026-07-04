@@ -37,7 +37,7 @@ function buildMetadataBlock(fm: Frontmatter): string {
 async function main() {
   const filePath = process.argv[2]
   if (!filePath) {
-    console.error('用法: pnpm publish <markdown-file>')
+    console.error('用法: pnpm post <markdown-file>')
     process.exit(1)
   }
 
@@ -47,10 +47,27 @@ async function main() {
     process.exit(1)
   }
 
-  const token = process.env.GITHUB_TOKEN
+  let token = process.env.GITHUB_TOKEN
+  let syncUrl = process.env.SYNC_URL
+  if (!token || !syncUrl) {
+    try {
+      const envFile = fs.readFileSync(path.resolve('.env'), 'utf-8')
+      if (!token) {
+        const m = envFile.match(/GITHUB_TOKEN="?([^"\n]+)"?/)
+        if (m) token = m[1]
+      }
+      if (!syncUrl) {
+        const m = envFile.match(/SYNC_URL="?([^"\n]+)"?/)
+        if (m) syncUrl = m[1]
+      }
+    } catch {}
+  }
   if (!token) {
-    console.error('未设置 GITHUB_TOKEN 环境变量')
+    console.error('未设置 GITHUB_TOKEN 环境变量，且 .env 文件中未找到')
     process.exit(1)
+  }
+  if (!syncUrl) {
+    syncUrl = 'http://localhost:3200'
   }
 
   const raw = fs.readFileSync(absPath, 'utf-8')
@@ -88,6 +105,20 @@ async function main() {
 
   console.log(`发布成功!`)
   console.log(`  ${issue.html_url}`)
+
+  // 直接调 NestJS 即时同步，不需要等 Webhook
+  try {
+    const res = await fetch(`${syncUrl}/v2/webhook/sync/${issue.number}`, {
+      method: 'POST',
+    })
+    if (res.ok) {
+      console.log(`已同步到数据库 (issue #${issue.number})`)
+    } else {
+      console.error(`同步失败: HTTP ${res.status}`)
+    }
+  } catch (err: any) {
+    console.error(`同步请求失败: ${err.message}`)
+  }
 }
 
 main().catch((err) => {
