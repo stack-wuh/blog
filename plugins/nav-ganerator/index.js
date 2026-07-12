@@ -1,15 +1,15 @@
 const formatterSubtext = (filename) => {
   const paths = filename.replace(/(\s|\$)/gi, '').split('/')
 
-  if (paths.length > 2) {
-    return paths.slice(2).join('-')
-  }
+ if (paths.length > 2) {
+   return paths.slice(2).join('-')
+ }
 
   if (paths.length > 1) {
-    return paths.slice(1)
+    return paths.slice(1).join('-')
   }
 
-  return filename
+ return filename
 }
 
 const formatterSubLink = (filename) => {
