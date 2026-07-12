@@ -1,20 +1,14 @@
-FROM node:latest
+FROM node:20-alpine AS build
 
-RUN echo "设置工作区间"
-WORKDIR /
+WORKDIR /app
 
-RUN echo "开始安装依赖"
-COPY package.json ./
+COPY package.json pnpm-lock.yaml ./
+RUN npm install -g pnpm && pnpm install
 
-RUN echo "设置npm的镜像源为华为源"
-RUN npm config set registry https://mirrors.huaweicloud.com/repository/npm
-
-RUN npm install -g pnpm
-RUN pnpm install
-RUN echo "依赖已安装"
-
-RUN echo "开始构建产物"
+COPY . .
 RUN pnpm run docs:build
-RUN echo "产物构建完成"
 
-RUN  pnpm run docs:preview
+FROM nginx:alpine
+COPY --from=build /app/docs/dist /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
