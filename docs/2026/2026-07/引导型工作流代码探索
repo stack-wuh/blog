@@ -1,0 +1,652 @@
+# 引导型工作流代码探索
+
+- 日期：2026-07-13
+- 目标阶段：C → B → A
+  - C：先形成流程复盘设计文档
+  - B：再更新 propose / discuss / apply / archive / commit 各阶段 skill
+  - A：最后更新 dev-workflow 总入口规则
+- 核心原则：复用现有 OpenSpec 制品，不新增额外交棒文件
+
+## 1. 背景
+
+上周工作流重点优化了代码探索流程，并增强了 `zentao-fetch` 能力，使其可以从禅道需求中解析出更多结构化信息，例如需求背景、上线时间、截图、字段、接口、菜单、业务域和潜在技术线索。
+
+随着解析能力增强，需要重新明确各阶段边界，避免阶段职责混淆：
+
+- `proposal` 阶段应保持纯需求方向收集。
+- `discuss` 阶段才进入技术方案、代码探索、影响范围确认。
+- `apply` 阶段消费已经结构化好的执行契约，不重新设计。
+- `archive` 阶段不仅归档 OpenSpec，还要沉淀需求新增的知识库和组件使用场景。
+- `commit` 阶段消费归档摘要和结构化状态，统一提交代码、OpenSpec、知识沉淀。
+
+## 2. 目标
+
+1. 明确 `proposal / discuss / apply / review / archive / commit` 阶段边界。
+2. 复用 `.openspec.yaml` 作为机器可读的跨阶段结构化事实源。
+3. 复用 `summary.md` 作为人类可读的归档摘要和知识沉淀入口。
+4. 在 `discuss` 阶段强制记录每个应用的影响范围矩阵。
+5. 在 `discuss` 阶段记录参考文件路径，方便用户快速打开代码确认设计依据。
+6. 在 `archive` 阶段补充组件使用场景沉淀：若使用场景在 `component-gateway/**/specs/` 中不存在，则新增沉淀。
+7. 让 `apply`、`review`、`archive`、`commit` 均消费前序阶段结构化数据，减少重复分析和猜测。
+
+## 3. 非目标
+
+- 不新增 `proposal-handoff.md`、`discuss-handoff.md`、`apply-handoff.md` 等额外交棒文件。
+- 不把 `proposal` 变成代码探索或技术方案阶段。
+- 不让 `apply` 阶段重新设计方案或私自扩大范围。
+- 不把 `archive` 降级为简单移动目录。
+- 不把每次需求的一次性实现细节都沉淀进知识库；只沉淀后续能复用的业务规则、代码定位、组件场景和实现模式。
+
+## 4. 现有资产与职责
+
+| 文件 | 角色 | 消费方 |
+|---|---|---|
+| `.openspec.yaml` | 机器可读结构化事实源，记录来源、阶段状态、影响范围、执行契约、验证结果、归档摘要路径 | discuss / apply / review / archive / commit |
+| `proposal.md` | 需求事实、背景、目标、范围、验收能力 | discuss / review / archive |
+| `design.md` | 技术设计、代码探索结论、关键决策、风险、影响范围说明 | apply / review / archive |
+| `tasks.md` | 执行任务清单，按依赖顺序组织 | apply / review / archive |
+| `specs/<capability>/spec.md` | 能力级验收标准 | review / archive |
+| `summary.md` | 归档摘要、人类可读知识沉淀、commit 摘要来源 | archive / commit / 后续需求探索 |
+| `component-gateway/**/specs/` | 组件真实使用场景沉淀，供后续组件选型和代码生成复用 | discuss / archive / 后续需求 |
+
+## 5. 总体流程
+
+```text
+zentao-fetch
+  ↓
+proposal：纯需求收集
+  ↓
+discuss：技术方案 + 代码探索 + 每应用影响范围 + 参考文件路径
+  ↓
+apply：按 .openspec.yaml.apply + tasks.md 实施
+  ↓
+review：对照 proposal / design / impactMatrix / tasks 验收
+  ↓
+archive：spec 合并 + summary.md + 知识库沉淀 + 组件使用场景沉淀
+  ↓
+commit：提交代码 + OpenSpec 归档 + summary.md + 知识库变更
+```
+
+## 6. `.openspec.yaml` 标准结构建议
+
+`.openspec.yaml` 是跨阶段唯一结构化交棒源。字段可以渐进填充，不要求 proposal 阶段一次写满。
+
+```yaml
+project: <业务仓库>
+change: enclosure-box-onsite-return-metrics
+date: 2026-07-07
+type: P
+status: proposed
+zentaoId: 552696
+onlineDate: 2026-07-09
+
+workflow:
+  currentStage: discuss
+  lastCompletedStage: proposal
+  nextStage: apply
+  updatedAt: 2026-07-13
+
+source:
+  zentao:
+    id: 552696
+    url: <禅道链接>
+    parsedAt: 2026-07-13
+    confidence: high
+
+proposal:
+  facts: []           # 来自禅道原文/截图/附件的事实
+  inferred: []        # 从截图、菜单、接口名推断的信息
+  technicalHints: []  # 可能涉及的应用、路由、接口、组件关键词
+  openQuestions: []   # 需要 proposal/discuss 确认的问题
+
+discuss:
+  exploration:
+    entrypoints: []
+    referenceFiles: []
+    stopReason: ""
+  impactMatrix: []
+  decisions: []
+  unresolved: []
+
+apply:
+  goal: {}
+  scope: {}
+  decisions: {}
+  blockers: {}
+  mappings: {}
+  implementationUnits: []
+  verification: {}
+  sequence: []
+  deviations: []
+
+review:
+  result: pending
+  checks:
+    proposalMatched: pending
+    designMatched: pending
+    impactMatrixMatched: pending
+    tasksCompleted: pending
+    testsPassed: pending
+  findings:
+    blocking: []
+    warnings: []
+
+archive:
+  summaryPath: summary.md
+  knowledge:
+    businessRules: []
+    codeNavigation: []
+    reusablePatterns: []
+    componentUsageScenarios: []
+  syncedSpecs: []
+  archivedAt: null
+
+commit:
+  ready: false
+  include:
+    - code
+    - openspec
+    - summary
+    - knowledge
+```
+
+## 7. zentao-fetch 边界
+
+`zentao-fetch` 是 proposal 上游增强能力，负责把禅道内容解析成结构化输入，但不能越权生成最终技术方案。
+
+### 7.1 应输出的信息分层
+
+```yaml
+proposal:
+  facts:
+    - 需求明确要求新增某指标
+    - 截图中存在某字段
+  inferred:
+    - 该需求可能涉及围板箱当前在场数页面
+  technicalHints:
+    - 菜单关键词：围板箱
+    - 接口关键词：xxx
+    - 可能应用：<业务仓库>
+  openQuestions:
+    - 字段名是否以后端返回为准
+```
+
+### 7.2 禁止事项
+
+- 不把推断当事实。
+- 不生成最终 edit 文件列表。
+- 不生成完整任务拆分。
+- 不替代 discuss 的代码探索。
+
+## 8. proposal 阶段边界
+
+### 8.1 职责
+
+- 收集需求背景。
+- 明确 Why / What。
+- 整理用户场景、业务目标、验收能力。
+- 生成 `proposal.md`。
+- 更新 `.openspec.yaml.proposal`。
+
+### 8.2 允许的轻量定位
+
+| 行为 | 是否允许 |
+|---|---|
+| 判断 OpenSpec 项目目录 | 允许 |
+| 根据禅道判断业务域 | 允许 |
+| 粗略识别疑似应用 | 允许 |
+| 深读 Vue 组件实现 | 不建议 |
+| 追踪调用链 | 不建议 |
+| 生成文件级任务 | 不允许 |
+
+### 8.3 输出口径
+
+proposal 可以写“疑似涉及 <业务仓库>”，但不能写“必须编辑某某 Vue 文件”。
+
+## 9. discuss 阶段边界
+
+`discuss` 是技术方案和代码探索主阶段。
+
+### 9.1 职责
+
+- 消费 `.openspec.yaml.proposal` 和 `zentao-fetch` 结果。
+- 根据菜单、路由、接口、组件名、截图文本定位代码。
+- 做引用追溯和已有模式对比。
+- 输出每个应用的影响范围矩阵。
+- 记录参考文件路径和参考目的，方便用户快速读代码确认。
+- 产出 `design.md`、`tasks.md`。
+- 初始化 `.openspec.yaml.discuss` 和 `.openspec.yaml.apply`。
+
+### 9.2 代码探索停止条件
+
+| 条件 | 动作 |
+|---|---|
+| 已定位入口、引用链、改动边界 | 停止探索，进入设计 |
+| 同一问题搜索超过 2 次仍未定位 | 停止，向用户确认 |
+| 出现“可能 / 应该 / 通常”这类不确定判断 | 停止，标记为 unresolved |
+| 发现范围会扩大到新应用 | 更新 impactMatrix 并确认 |
+
+## 10. discuss：参考文件路径记录
+
+### 10.1 目的
+
+在 discuss 阶段，用户经常需要确认“AI 为什么这样设计”。如果只写结论，用户需要重新搜索代码。应把参考文件路径直接记录到 `.openspec.yaml.discuss.exploration.referenceFiles` 和 `design.md` 中。
+
+### 10.2 YAML 结构
+
+```yaml
+discuss:
+  exploration:
+    entrypoints:
+      - path: /detail-page/store-goods/need-group-board-weight/current-on-site-count/enclosure-box/index.vue
+        reason: 本需求汇总页入口
+    referenceFiles:
+      - path: /detail-page/store-goods/need-group-board-weight/customer-asset-count/index.vue
+        role: pattern-reference
+        purpose: 参考已有指标列 cooCells 配置和点击下钻模式
+        readReason: 同业务域相似指标实现
+      - path: /detail-page/store-goods/need-group-board-weight/box-transfer-count/need-return/index.vue
+        role: implementation-reference
+        purpose: 参考明细页 detailCommonMixin 使用方式
+        readReason: 明细页请求、表格和参数透传模式相同
+      - path: /mixins/detail-common-mixin.js
+        role: dependency-reference
+        purpose: 确认 mixin 已覆盖能力，避免重复实现
+        readReason: 明细页依赖该 mixin
+    stopReason: 已定位入口、复用模式和改动边界
+```
+
+### 10.3 design.md 展示格式
+
+```md
+## 代码探索参考文件
+
+| 文件 | 角色 | 参考目的 | 结论 |
+|---|---|---|---|
+| `customer-asset-count/index.vue` | pattern-reference | 参考 cooCells 指标点击配置 | 可复用 |
+| `detail-common-mixin.js` | dependency-reference | 确认明细页公共能力 | 不改源码 |
+```
+
+### 10.4 参考文件角色枚举
+
+| role | 含义 |
+|---|---|
+| `entrypoint` | 本需求入口文件 |
+| `pattern-reference` | 模式参考文件 |
+| `implementation-reference` | 具体实现参考文件 |
+| `dependency-reference` | 依赖能力参考文件 |
+| `negative-reference` | 确认不采用的反例 |
+| `risk-reference` | 风险验证参考文件 |
+
+## 11. discuss：每应用影响范围矩阵
+
+### 11.1 YAML 结构
+
+```yaml
+discuss:
+  impactMatrix:
+    - app: <业务仓库>
+      impactType: direct-edit
+      scope: 围板箱当前在场数汇总页、两个明细页、路由、api-config
+      files:
+        edit:
+          - /detail-page/store-goods/need-group-board-weight/current-on-site-count/enclosure-box/index.vue
+        readOnly:
+          - /mixins/detail-common-mixin.js
+        forbidden:
+          - KS 仓库或 KS 页面实现
+      references:
+        - /detail-page/store-goods/need-group-board-weight/customer-asset-count/index.vue
+      risk: medium
+      evidence: 路由和现有指标引用链确认
+
+    - app: common
+      impactType: dependency-only
+      scope: 复用公共表格组件，不改组件源码
+      files:
+        readOnly: []
+      risk: low
+      evidence: 只消费组件 API
+
+    - app: KS
+      impactType: out-of-scope
+      scope: 不实现
+      reason: proposal 明确仅 ERP 端
+```
+
+### 11.2 impactType 枚举
+
+| impactType | 含义 |
+|---|---|
+| `direct-edit` | 本次会直接编辑代码 |
+| `config-only` | 只涉及配置，如 searchCode、权限、菜单 |
+| `dependency-only` | 依赖或复用，但不改源码 |
+| `read-only` | 只作为参考文件读取 |
+| `out-of-scope` | 已确认不涉及 |
+| `unknown` | 暂无法确认，必须阻塞或转 unresolved |
+## 12. discuss：报表组件页面级使用案例
+
+报表业务线的页面实现强依赖 `table-base` 和 `table-org`，所以 discuss 阶段除了输出代码探索参考文件和每应用影响范围矩阵，还必须识别页面级组件使用案例沉淀需求。
+
+### 12.1 触发条件
+
+满足任一条件即触发：
+
+- `zentao-fetch` 预分析命中 `业务域=report`。
+- discuss 阶段确认页面是报表类页面。
+- 设计中使用 `TableBase`、`TableOrg`、`tableCells`、组织树九级下钻、多 Tab 报表、指标下钻等模式。
+
+### 12.2 记录结构
+
+```yaml
+discuss:
+  componentPageScenarios:
+    - component: TableBase
+      pageLevelScenario: 指标列点击跳转明细页
+      businessLine: report
+      sourceFiles:
+        - /detail-page/store-goods/need-group-board-weight/current-on-site-count/enclosure-box/index.vue
+      referenceFiles:
+        - /detail-page/store-goods/need-group-board-weight/customer-asset-count/index.vue
+      gatewaySpecsDir: <component-gateway>/business-components/table-base/specs
+      action: delegate-to-other-ai
+      reason: 报表页面级 tableCells + privateParams 下钻场景需要沉淀为组件使用案例
+```
+
+### 12.3 动作枚举
+
+| action | 含义 |
+|---|---|
+| `create-page-level-case` | 当前 agent 需要新增页面级使用案例 |
+| `update-existing-case` | 当前 agent 需要更新已有页面级使用案例 |
+| `reused-existing-case` | 已有 specs 覆盖，本次只复用 |
+| `delegate-to-other-ai` | 场景需要沉淀，但执行交给其他 AI |
+| `not-needed` | 本次未使用该组件或没有新增页面级场景 |
+
+### 12.4 design.md 展示格式
+
+```md
+## 报表组件页面级使用案例
+
+| 组件 | 页面级场景 | 来源文件 | 参考文件 | specs 动作 | 备注 |
+|---|---|---|---|---|---|
+| cooTableBase | 指标列点击跳转明细页 | `.../index.vue` | `.../customer-asset-count/index.vue` | delegate-to-other-ai | 交给组件场景沉淀任务 |
+```
+
+即使页面级案例沉淀由其他 AI 执行，discuss 阶段也必须把场景、来源文件、参考文件、目标 specs 目录和委派动作记录清楚。
+
+## 13. apply 阶段边界
+
+### 13.1 职责
+
+- 消费 `.openspec.yaml.apply` 和 `tasks.md`。
+- 执行前做 design-verify。
+- 按 implementationUnits 或 tasks.md 顺序实现。
+- 更新任务完成状态。
+- 记录范围外变更。
+
+### 13.2 范围外变更处理
+
+如果 apply 需要编辑不在 `touchPolicy.edit` 或 `impactMatrix.files.edit` 中的文件：
+
+1. 暂停实现。
+2. 说明新增文件原因和所属应用。
+3. 更新 `.openspec.yaml.discuss.impactMatrix`。
+4. 更新 `.openspec.yaml.apply.scope.touchPolicy`。
+5. 更新 `design.md` / `tasks.md`。
+6. 必要时让用户确认。
+7. 再继续实现。
+
+记录格式：
+
+```yaml
+apply:
+  deviations:
+    - file: pages/xxx/new-file.vue
+      app: <业务仓库>
+      reason: 原 design 未覆盖，但路由注册必须新增该文件
+      impactMatrixUpdated: true
+      tasksUpdated: true
+      confirmedByUser: true
+```
+
+## 14. review 阶段边界
+
+review 阶段至少验证四个维度：
+
+1. `proposalMatched`：需求是否满足。
+2. `designMatched`：实现是否符合设计。
+3. `impactMatrixMatched`：实际 git diff 是否超出影响范围矩阵。
+4. `tasksCompleted`：任务是否完成。
+
+```yaml
+review:
+  result: passed
+  checks:
+    proposalMatched: passed
+    designMatched: passed
+    impactMatrixMatched: passed
+    tasksCompleted: passed
+    testsPassed: warning
+  findings:
+    blocking: []
+    warnings:
+      - 未执行完整 E2E，仅完成静态检查
+```
+
+## 15. archive 阶段边界
+
+archive 阶段不是简单移动目录，而是完成四类沉淀：
+
+1. OpenSpec 归档：status、spec sync、archive 移动。
+2. `summary.md`：人类可读归档摘要。
+3. 需求知识库沉淀：业务规则、代码定位、可复用模式。
+4. 组件使用场景沉淀：写入 `coo-component-gateway/**/specs/`。
+
+## 16. summary.md 标准结构
+
+```md
+# <change>
+
+- **时间**:
+- **类型**:
+- **标题**:
+- **背景**:
+- **方案**:
+- **效果**:
+- **关联禅道**:
+- **影响应用**:
+- **变更文件**:
+- **验证结果**:
+- **知识沉淀**:
+  - 业务规则:
+  - 代码定位:
+  - 可复用模式:
+  - 组件使用场景:
+- **总耗时**:
+```
+
+### 16.1 影响应用
+
+```md
+## 影响应用
+
+| 应用 | 影响类型 | 说明 |
+|---|---|---|
+| <业务仓库> | direct-edit | 修改围板箱当前在场数及明细 |
+| common | dependency-only | 复用公共表格组件，不改源码 |
+```
+
+### 16.2 知识沉淀
+
+```md
+## 知识沉淀
+
+### 业务规则
+
+- 围板箱当前在场数新增指标只展示后端返回结果，前端不本地推导算法。
+
+### 代码定位
+
+- 围板箱当前在场数入口：`/detail-page/store-goods/need-group-board-weight/current-on-site-count/enclosure-box/index.vue`
+
+### 可复用模式
+
+- 报表指标列点击下钻可复用 tableCells + privateParams 模式。
+
+### 组件使用场景
+
+- TableBase：指标列点击跳转明细。
+- Dialog：若本次使用弹窗，则记录弹窗父子通信模式。
+```
+
+## 17. archive：组件使用场景沉淀
+
+### 17.1 背景
+
+`component-gateway` 中每个组件目录都有 `specs/`，用于沉淀真实项目中的组件使用场景：
+
+```text
+<组件目录>/
+  specs/
+    001-<spec名>/
+      spec.md
+      example.vue
+```
+
+archive 阶段必须检查本次需求是否产生新的组件使用场景。如果是新场景，需要写入对应组件的 `specs/` 目录。
+
+### 17.2 检查流程
+
+```text
+[1] 从 design.md / git diff / summary.md 识别本次使用的 COO 组件
+      ↓
+[2] 到 component-gateway 对应组件目录下扫描 specs/*/spec.md
+      ↓
+[3] 关键字匹配
+      ↓ 无命中：新增组件场景
+      ↓ 有命中：读取 example.vue 深度比较
+           ↓ 同一场景：更新 example.vue 为最新示例
+           ↓ 不同场景：新增组件场景
+```
+
+### 17.3 新增 spec.md 格式
+
+```md
+# 场景: <标题>
+日期: yyyy-MM-dd
+来源: <change-name>
+关键字: 表格, tableCells, privateParams, 跳转明细
+组件: TableBase
+场景: 在报表汇总页中通过 tableCells 配置指标列，点击后携带 privateParams 跳转到明细页
+```
+
+### 17.4 example.vue 要求
+
+- 只保留关键代码，不粘贴完整业务页面。
+- 必须能说明组件如何使用。
+- 删除无关业务字段、敏感信息、一次性常量。
+- 保留关键 props、events、slots、methods、配置对象。
+
+### 17.5 `.openspec.yaml.archive` 记录
+
+```yaml
+archive:
+  knowledge:
+    componentUsageScenarios:
+      - component: cooTableBase
+        scenario: 指标列点击跳转明细
+        action: created
+        specPath: <component-gateway>/business-components/table-base/specs/009-metric-cell-navigate-detail/spec.md
+      - component: cooDialog
+        scenario: listeners 父子通信
+        action: reused
+        specPath: <component-gateway>/business-components/dialog/specs/002-listeners-communication/spec.md
+```
+
+### 17.6 沉淀粒度
+
+| 内容 | 是否沉淀 |
+|---|---|
+| 新的组件组合方式 | 是 |
+| 新的 props/events/slots 使用模式 | 是 |
+| 老场景但示例已过时 | 更新 example.vue |
+| 纯业务字段差异 | 否 |
+| 一次性页面逻辑 | 否 |
+| 敏感数据或真实生产数据 | 否 |
+
+## 18. commit 阶段边界
+
+commit 阶段消费归档结果，不重新分析业务。
+
+### 18.1 commit 前检查
+
+- `.openspec.yaml.status` 是否与实际阶段一致。
+- 是否存在 `summary.md`。
+- `summary.md` 是否包含影响应用和知识沉淀。
+- 若本次产生新的组件使用场景，是否已更新 `coo-component-gateway/**/specs/`。
+- git diff 是否包含代码、OpenSpec、summary、知识库更新。
+- commit message 是否关联禅道 ID / task ID / change name。
+
+### 18.2 阻断条件
+
+| 条件 | 动作 |
+|---|---|
+| 有代码改动但无 summary.md | 阻断 |
+| 有新组件场景但未沉淀 | 阻断或要求说明“不沉淀原因” |
+| `.openspec.yaml.status` 与归档状态不一致 | 阻断 |
+| 归档文档未纳入 commit | 阻断 |
+
+## 19. 阶段改造计划 B
+
+确认本文档后，按以下顺序改造阶段 skill：
+
+1. `workflow-propose`
+   - 强化 proposal 边界。
+   - 规范 zentao-fetch 输出分层。
+   - 禁止生成最终 edit 文件列表。
+
+2. `workflow-discuss`
+   - 增加代码探索停止条件。
+   - 增加 referenceFiles 记录。
+   - 增加强制 impactMatrix 输出。
+   - 初始化 `.openspec.yaml.apply`。
+
+3. `workflow-apply`
+   - 消费 `.openspec.yaml.apply`。
+   - 增加范围外变更回写规则。
+   - 不重新设计。
+
+4. `workflow-review`
+   - 增加 impactMatrixMatched 检查。
+   - 对照 proposal / design / tasks / git diff 验收。
+
+5. `workflow-archive`
+   - 标准化 summary.md。
+   - 增加知识沉淀。
+   - 增加组件使用场景沉淀到 `component-gateway/**/specs/`。
+
+6. `workflow-commit`
+   - 检查 summary.md 和组件场景沉淀。
+   - 统一提交代码、OpenSpec、知识库更新。
+
+## 20. 总入口改造计划 A
+
+阶段 skill 更新完成后，再更新 `dev-workflow` 总入口：
+
+- 更新阶段提示。
+- 更新路由说明。
+- 声明 `.openspec.yaml` 是结构化交棒源。
+- 声明 `summary.md` 是归档摘要和知识沉淀源。
+- 声明 discuss 阶段必须输出影响范围矩阵和参考文件路径。
+- 声明 archive 阶段必须检查组件使用场景沉淀。
+
+## 21. 决策摘要
+
+1. 不新增交棒文件，复用 `.openspec.yaml` 和 `summary.md`。
+2. `proposal` 只做需求方向收集。
+3. `discuss` 承担代码探索、影响范围矩阵、参考文件路径记录。
+4. `apply` 消费结构化执行契约，不重新设计。
+5. `review` 增加影响范围矩阵验收。
+6. `archive` 增加知识库沉淀和组件使用场景沉淀。
+7. `commit` 统一提交代码、OpenSpec、summary、知识库变更。
