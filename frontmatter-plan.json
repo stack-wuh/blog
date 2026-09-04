@@ -1,1700 +1,1854 @@
 {
-  "generatedAt": "2026-09-04T08:23:54.002Z",
+  "generatedAt": "2026-09-04T08:42:23.313Z",
   "spec": "FRONTMATTER.md v1",
   "items": [
     {
       "path": "docs/$AST/00.前言.md",
       "slug": "ast-00-introduction",
-      "date": "2023-05-13",
-      "title": "00.前言",
+      "title": "前言",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-05-13",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$AST/01. 什么是AST.md",
       "slug": "ast-01-what-is-ast",
-      "date": "2023-05-03",
-      "title": "01. 什么是AST",
+      "title": "什么是AST?",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-05-03",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$AST/02.什么是节点类型.md",
       "slug": "ast-02-node-types",
-      "date": "2023-05-03",
-      "title": "02.什么是节点类型",
+      "title": "什么是节点类型",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-05-03",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$AST/03.什么是acorn与babel.md",
       "slug": "ast-03-acorn-and-babel",
-      "date": "2023-05-03",
-      "title": "03.什么是acorn与babel",
+      "title": "什么是acorn与babel",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-05-03",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$AST/04.什么是语句和表达式.md",
       "slug": "ast-04-statements-and-expressions",
-      "date": "2023-05-03",
-      "title": "04.什么是语句和表达式",
+      "title": "什么是语句和表达式",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-05-03",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$AST/05.怎么对AST插入新节点.md",
       "slug": "ast-05-insert-into-ast",
-      "date": "2023-05-03",
-      "title": "05.怎么对AST插入新节点",
+      "title": "怎么对AST插入新节点",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-05-03",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$AST/06.今日无事.md",
       "slug": "ast-06-nothing-today",
-      "date": "2023-05-03",
-      "title": "06.今日无事",
+      "title": "今日无事",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-05-03",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$AST/07.acorn实现插入节点.md",
       "slug": "ast-07-acorn-insert-node",
-      "date": "2023-05-03",
-      "title": "07.acorn实现插入节点",
+      "title": "acorn实现插入节点",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-05-03",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$AST/08.插入Number类型的节点.md",
       "slug": "ast-08-insert-number-node",
-      "date": "2023-05-03",
-      "title": "08.插入Number类型的节点",
+      "title": "插入Number类型的节点",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-05-03",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$AST/09.插入String类型的节点.md",
       "slug": "ast-09-insert-string-node",
-      "date": "2023-05-03",
-      "title": "09.插入String类型的节点",
+      "title": "插入String类型的节点",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-05-03",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$AST/10.插入Array类型的节点.md",
       "slug": "ast-10-insert-array-node",
-      "date": "2023-04-15",
-      "title": "10.插入Array类型的节点",
+      "title": "插入Array类型的节点",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-15",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$AST/11.插入Object类型的节点.md",
       "slug": "ast-11-insert-object-node",
-      "date": "2023-04-16",
-      "title": "11.插入Object类型的节点",
+      "title": "插入Object类型的节点",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-16",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$AST/12.插入Boolean类型的节点.md",
       "slug": "ast-12-insert-boolean-node",
-      "date": "2023-05-03",
-      "title": "12.插入Boolean类型的节点",
+      "title": "插入Boolean类型的节点",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-05-03",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$AST/13.插入Function类型的节点.md",
       "slug": "ast-13-insert-function-node",
-      "date": "2023-05-03",
-      "title": "13.插入Function类型的节点",
+      "title": "插入Function类型的节点",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-05-03",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$AST/14.迭代语句.md",
       "slug": "ast-14-iteration-statements",
-      "date": "2023-05-07",
-      "title": "14.迭代语句",
+      "title": "迭代语句",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-05-07",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$AST/15.条件语句.md",
       "slug": "ast-15-conditional-statements",
-      "date": "2023-05-13",
-      "title": "15.条件语句",
+      "title": "逻辑语句",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-05-13",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$Koajs/1-为什么选择了koajs.md",
       "slug": "koajs-1-why-chose-koajs",
-      "date": "2023-04-01",
-      "title": "1-为什么选择了koajs",
+      "title": "为什么使用Koajs",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$Koajs/2-创建一个简单的koa服务.md",
       "slug": "koajs-2-minimal-koa-server",
-      "date": "2023-04-01",
-      "title": "2-创建一个简单的koa服务",
+      "title": "创建一个简单的koa服务",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$Koajs/3-常用的一些koa中间件.md",
       "slug": "koajs-3-common-koa-middlewares",
-      "date": "2023-04-01",
-      "title": "3-常用的一些koa中间件",
+      "title": "在项目中用到的中间件",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$pnpm/01如何使用pnpm.md",
       "slug": "pnpm-01-getting-started",
-      "date": "2024-12-15",
-      "title": "01如何使用pnpm",
+      "title": "什么是pnpm",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-12-15",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$pnpm/02开启husky提交日志.md",
       "slug": "pnpm-02-husky-commit-log",
-      "date": "2024-12-15",
-      "title": "02开启husky提交日志",
+      "title": "开启kusky提交检测",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-12-15",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$pnpm/02开启husky提交检测.md",
       "slug": "pnpm-02-husky-commit-check",
-      "date": "2024-12-15",
-      "title": "02开启husky提交检测",
+      "title": "开启kusky提交检测",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-12-15",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-04/2023-04-01.md",
       "slug": "weekly-2023-04-01",
-      "date": "2023-04-01",
       "title": "2023-04-01",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-04/2023-04-09.md",
       "slug": "weekly-2023-04-09",
-      "date": "2023-04-09",
       "title": "2023-04-09",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-09",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-04/2023-04-15.md",
       "slug": "weekly-2023-04-15",
-      "date": "2023-04-15",
       "title": "2023-04-15",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-15",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-04/2023-04-22.md",
       "slug": "weekly-2023-04-22",
-      "date": "2023-04-22",
       "title": "2023-04-22",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-22",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-05/2023-05-01.md",
       "slug": "weekly-2023-05-01",
-      "date": "2023-05-01",
       "title": "2023-05-01",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-05-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-05/2023-05-06.md",
       "slug": "weekly-2023-05-06",
-      "date": "2023-05-06",
       "title": "2023-05-06",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-05-06",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-05/2023-05-14.md",
       "slug": "weekly-2023-05-14",
-      "date": "2023-05-14",
       "title": "2023-05-14",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-05-14",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-05/2023-05-20.md",
       "slug": "weekly-2023-05-20",
-      "date": "2023-05-20",
       "title": "2023-05-20",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-05-20",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-05/2023-05-27.md",
       "slug": "weekly-2023-05-27",
-      "date": "2023-05-27",
       "title": "2023-05-27",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-05-27",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-06/2023-06-04.md",
       "slug": "weekly-2023-06-04",
-      "date": "2023-06-04",
       "title": "2023-06-04",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-06-04",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-06/2023-06-11.md",
       "slug": "weekly-2023-06-11",
-      "date": "2023-06-11",
       "title": "2023-06-11",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-06-11",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-06/2023-06-18.md",
       "slug": "weekly-2023-06-18",
-      "date": "2023-06-18",
       "title": "2023-06-18",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-06-18",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-06/2023-06-24.md",
       "slug": "weekly-2023-06-24",
-      "date": "2023-06-24",
       "title": "2023-06-24",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-06-24",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-07/2023-07-01.md",
       "slug": "weekly-2023-07-01",
-      "date": "2023-07-01",
       "title": "2023-07-01",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-07-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-07/2023-07-09.md",
       "slug": "weekly-2023-07-09",
-      "date": "2023-07-09",
       "title": "2023-07-09",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-07-09",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-07/2023-07-15.md",
       "slug": "weekly-2023-07-15",
-      "date": "2023-07-15",
       "title": "2023-07-15",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-07-15",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-08/2023-08-06.md",
       "slug": "weekly-2023-08-06",
-      "date": "2023-08-06",
-      "title": "2023-08-06",
+      "title": "2023-08-6",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-08-06",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-08/2023-08-12.md",
       "slug": "weekly-2023-08-12",
-      "date": "2023-08-12",
       "title": "2023-08-12",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-08-12",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-08/2023-08-20.md",
       "slug": "weekly-2023-08-20",
-      "date": "2023-08-20",
       "title": "2023-08-20",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-08-20",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-08/2023-08-27.md",
       "slug": "weekly-2023-08-27",
-      "date": "2023-08-27",
-      "title": "2023-08-27",
+      "title": "2023-08-20",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-08-27",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-10/2023-09-30.md",
       "slug": "weekly-2023-09-30",
-      "date": "2023-09-30",
       "title": "2023-09-30",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-09-30",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-11/2023-11-19.md",
       "slug": "weekly-2023-11-19",
-      "date": "2023-11-19",
       "title": "2023-11-19",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-11-19",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-12/2023-12-03.md",
       "slug": "weekly-2023-12-03",
-      "date": "2023-12-03",
       "title": "2023-12-03",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-12-03",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-12/2023-12-10.md",
       "slug": "weekly-2023-12-10",
-      "date": "2023-12-10",
       "title": "2023-12-10",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-12-10",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-12/2023-12-17.md",
       "slug": "weekly-2023-12-17",
-      "date": "2023-12-17",
       "title": "2023-12-17",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-12-17",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-12/2023-12-23.md",
       "slug": "weekly-2023-12-23",
-      "date": "2023-12-23",
       "title": "2023-12-23",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-12-23",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2023/2023-12/2023-12-30.md",
       "slug": "weekly-2023-12-30",
-      "date": "2023-12-30",
       "title": "2023-12-30",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-12-30",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-01/2024-01-06.md",
       "slug": "weekly-2024-01-06",
-      "date": "2024-01-06",
-      "title": "2024-01-06",
+      "title": "年终总结",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-01-06",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-01/2024-01-20.md",
       "slug": "weekly-2024-01-20",
-      "date": "2024-01-20",
       "title": "2024-01-20",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-01-20",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-01/2024-01-28.md",
       "slug": "weekly-2024-01-28",
-      "date": "2024-01-28",
       "title": "2024-01-28",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-01-28",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-02/2024-02-25.md",
       "slug": "weekly-2024-02-25",
-      "date": "2024-02-25",
       "title": "2024-02-25",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-02-25",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-03/2024-03-03.md",
       "slug": "weekly-2024-03-03",
-      "date": "2024-03-03",
       "title": "2024-03-03",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-03-03",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-03/2024-03-17.md",
       "slug": "weekly-2024-03-17",
-      "date": "2024-03-17",
       "title": "2024-03-17",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-03-17",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-03/2024-03-31.md",
       "slug": "weekly-2024-03-31",
-      "date": "2024-03-31",
       "title": "2024-03-31",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-03-31",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-04/2024-04-14.md",
       "slug": "weekly-2024-04-14",
-      "date": "2024-04-14",
       "title": "2024-04-14",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-04-14",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-04/2024-04-21.md",
       "slug": "weekly-2024-04-21",
-      "date": "2024-04-21",
       "title": "2024-04-21",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-04-21",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-05/2024-05-05.md",
       "slug": "weekly-2024-05-05",
-      "date": "2024-05-05",
       "title": "2024-05-05",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-05-05",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-05/2024-05-12.md",
       "slug": "weekly-2024-05-12",
-      "date": "2024-05-12",
       "title": "2024-05-12",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-05-12",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-05/2024-05-19.md",
       "slug": "weekly-2024-05-19",
-      "date": "2024-05-19",
       "title": "2024-05-19",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-05-19",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-05/2024-05-26.md",
       "slug": "weekly-2024-05-26",
-      "date": "2024-05-26",
       "title": "2024-05-26",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-05-26",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-06/2024-06-02.md",
       "slug": "weekly-2024-06-02",
-      "date": "2024-06-02",
       "title": "2024-06-02",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-06-02",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-06/2024-06-09.md",
       "slug": "weekly-2024-06-09",
-      "date": "2024-06-09",
-      "title": "2024-06-09",
+      "title": "2024-06-16",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-06-09",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-06/2024-06-16.md",
       "slug": "weekly-2024-06-16",
-      "date": "2024-06-16",
       "title": "2024-06-16",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-06-16",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-06/2024-06-23.md",
       "slug": "weekly-2024-06-23",
-      "date": "2024-06-23",
       "title": "2024-06-23",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-06-23",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-06/2024-06-29.md",
       "slug": "weekly-2024-06-29",
-      "date": "2024-06-29",
       "title": "2024-06-29",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-06-29",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-07/2024-07-07.md",
       "slug": "weekly-2024-07-07",
-      "date": "2024-07-07",
       "title": "2024-07-07",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-07-07",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-07/2024-07-13.md",
       "slug": "weekly-2024-07-13",
-      "date": "2024-07-13",
       "title": "2024-07-13",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-07-13",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-07/2024-07-21.md",
       "slug": "weekly-2024-07-21",
-      "date": "2024-07-21",
       "title": "2024-07-21",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-07-21",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-07/2024-07-28.md",
       "slug": "weekly-2024-07-28",
-      "date": "2024-07-28",
       "title": "2024-07-28",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-07-28",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-08/2024-08-04.md",
       "slug": "weekly-2024-08-04",
-      "date": "2024-08-04",
       "title": "2024-08-04",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-08-04",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-08/2024-08-11.md",
       "slug": "weekly-2024-08-11",
-      "date": "2024-08-11",
       "title": "2024-08-11",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-08-11",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-08/2024-08-18.md",
       "slug": "weekly-2024-08-18",
-      "date": "2024-08-18",
       "title": "2024-08-18",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-08-18",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-08/2024-08-25.md",
       "slug": "weekly-2024-08-25",
-      "date": "2024-08-25",
       "title": "2024-08-25",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-08-25",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-09/2024-09-08.md",
       "slug": "weekly-2024-09-08",
-      "date": "2024-09-08",
       "title": "2024-09-08",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-09-08",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-09/2024-09-15.md",
       "slug": "weekly-2024-09-15",
-      "date": "2024-09-15",
       "title": "2024-09-15",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-09-15",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-09/2024-09-22.md",
       "slug": "weekly-2024-09-22",
-      "date": "2024-09-22",
       "title": "2024-09-22",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-09-22",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-09/20240927.md",
       "slug": "weekly-2024-09-27",
-      "date": "2024-09-29",
-      "title": "20240927",
+      "title": "2024-09-29",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-09-29",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-10/2024-10-13.md",
       "slug": "weekly-2024-10-13",
-      "date": "2024-10-13",
       "title": "2024-10-13",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-10-13",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-10/2024-10-20.md",
       "slug": "weekly-2024-10-20",
-      "date": "2024-10-20",
       "title": "2024-10-20",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-10-20",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-10/2025-10-27.md",
       "slug": "weekly-2025-10-27",
-      "date": "2025-10-27",
-      "title": "2025-10-27",
+      "title": "2024-10-27",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2025-10-27",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-11/2024-11-03.md",
       "slug": "weekly-2024-11-03",
-      "date": "2024-11-03",
       "title": "2024-11-03",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-11-03",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-11/2024-11-10.md",
       "slug": "weekly-2024-11-10",
-      "date": "2024-11-10",
       "title": "2024-11-10",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-11-10",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-11/2024-11-17.md",
       "slug": "weekly-2024-11-17",
-      "date": "2024-11-17",
       "title": "2024-11-17",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-11-17",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-11/2024-11-24.md",
       "slug": "weekly-2024-11-24",
-      "date": "2024-11-24",
       "title": "2024-11-24",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-11-24",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-12/2024-12-01.md",
       "slug": "weekly-2024-12-01",
-      "date": "2024-12-01",
       "title": "2024-12-01",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-12-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-12/2024-12-15.md",
       "slug": "weekly-2024-12-15",
-      "date": "2024-12-15",
       "title": "2024-12-15",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-12-15",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-12/2024-12-21.md",
       "slug": "weekly-2024-12-21",
-      "date": "2024-12-21",
       "title": "2024-12-21",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-12-21",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2024/2024-12/2024-12-28.md",
       "slug": "weekly-2024-12-28",
-      "date": "2024-12-28",
-      "title": "2024-12-28",
+      "title": "2024-12-28 年度总结",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-12-28",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2025/2025-01/2025-01-05.md",
       "slug": "weekly-2025-01-05",
-      "date": "2025-01-05",
       "title": "2025-01-05",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2025-01-05",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2025/2025-01/2025-01-11.md",
       "slug": "weekly-2025-01-11",
-      "date": "2025-01-11",
       "title": "2025-01-11",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2025-01-11",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2025/2025-07/2025-07-27.md",
       "slug": "weekly-2025-07-27",
-      "date": "2025-07-27",
       "title": "2025-07-27",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2025-07-27",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2025/2025-08/2025-08-03.md",
       "slug": "weekly-2025-08-03",
-      "date": "2025-08-03",
       "title": "2025-08-03",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2025-08-03",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2025/2025-08/2025-08-17.md",
       "slug": "weekly-2025-08-17",
-      "date": "2025-08-17",
       "title": "2025-08-17",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2025-08-17",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2025/2025-08/2025-08-31.md",
       "slug": "weekly-2025-08-31",
-      "date": "2025-08-31",
       "title": "2025-08-31",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2025-08-31",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2026/2026-03/2026-03-29.md",
       "slug": "weekly-2026-03-29",
-      "date": "2026-03-29",
       "title": "2026-03-29",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2026-03-29",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2026/2026-05/2026-05-10.md",
       "slug": "weekly-2026-05-10",
-      "date": "2026-05-10",
       "title": "2026-05-10",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2026-05-10",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2026/2026-05/2026-05-24.md",
       "slug": "weekly-2026-05-24",
-      "date": "2026-05-24",
       "title": "2026-05-24",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2026-05-24",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/$weekSummary/2026/2026-06/年中总结.md",
       "slug": "weekly-2026-mid-year-review",
-      "date": "2026-06-21",
       "title": "年中总结",
+      "titleFrom": "fm",
       "type": "note",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2026-06-21",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2018/2018-08/2018-08-05.md",
       "slug": "2018-08-05",
-      "date": "2018-08-05",
-      "title": "2018-08-05",
+      "title": "个人博客开篇：技术栈选择与学习路径",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2018-08-05",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2018/2018-08/2018-08-07.md",
       "slug": "2018-08-07",
-      "date": "2018-08-07",
-      "title": "2018-08-07",
+      "title": "OpenAI 战胜人类后，前端工程师的生存策略",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2018-08-07",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2018/2018-11/js打印内容.md",
       "slug": "js-print-page-content",
-      "date": "2023-04-01",
-      "title": "js打印内容",
+      "title": "jsPrint：用 jQuery 插件替代原生打印的方案",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2018/2018-style-review.md",
       "slug": "2018-blog-style-review",
-      "date": "2026-05-31",
       "title": "2018 年博客风格诊断与改写建议",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2026-05-31",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2019/2019-01/如何写好一份年度总结PPT.md",
       "slug": "how-to-write-annual-review-ppt",
-      "date": "2023-04-01",
       "title": "如何写好一份年度总结PPT",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2020/2020-04/JS继承学习.md",
       "slug": "js-inheritance-learning",
-      "date": "2024-04-06",
-      "title": "JS继承学习",
+      "title": "JS 继承：原型链、组合与寄生组合的实现与取舍",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2024-04-06",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2020/2020-04/优化网站的加载速度.md",
       "slug": "optimize-website-loading-speed",
-      "date": "2023-04-01",
-      "title": "优化网站的加载速度",
+      "title": "网站优化：从 CDN 到懒加载的五项实践",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": "https://cdn.wuh.site/img/20040201.png",
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2020/2020-04/在对接微信平台的文档写法.md",
       "slug": "wechat-platform-doc-writing",
-      "date": "2023-04-01",
-      "title": "标题",
+      "title": "Markdown 文档排版规范",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": "图片地址",
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2020/2020-04/我使用30天完成了我的个人网站--nginx.md",
       "slug": "30-days-personal-website-nginx",
-      "date": "2023-04-01",
-      "title": "/usr/local/nginx  ← 我的安装位置",
+      "title": "我用 30 天完成了个人网站（上）：Nginx 配置实践",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2020/2020-04/我使用30天完成了我的个人网站-Express.md",
       "slug": "30-days-personal-website-express",
-      "date": "2023-04-01",
-      "title": "我使用30天完成了我的个人网站-Express",
+      "title": "我用 30 天完成了个人网站（下）：Express + MongoDB 后台实践",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2020/2020-04/真实地偏见.md",
       "slug": "genuine-bias",
-      "date": "2023-04-01",
       "title": "真实地偏见",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2020/2020-06/我的生活毁于了忙碌.md",
       "slug": "life-ruined-by-busyness",
-      "date": "2023-04-01",
       "title": "我的生活毁于了忙碌",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": "https://source-1300700534.cos.ap-shenzhen-fsi.myqcloud.com/2020-06-27-122245.png",
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2020/2020-10/业务中的条件渲染另一种玩法.md",
       "slug": "conditional-rendering-another-way",
-      "date": "2023-04-01",
-      "title": "业务中的条件渲染另一种玩法",
+      "title": "业务中条件渲染的另一种玩法：从 ProTable 到组合函数",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2020/2020-10/从业务中去学习React.md",
       "slug": "learn-react-from-business",
-      "date": "2023-04-01",
-      "title": "从业务中去学习React",
+      "title": "从业务中学习 React：五种组件通讯方式对比",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": "https://source-1300700534.cos.ap-shenzhen-fsi.myqcloud.com/2020-10-07-083409.png",
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2020/2020-11/gitflow工作流.md",
       "slug": "gitflow-workflow",
-      "date": "2023-04-01",
-      "title": "origin",
+      "title": "如何使用 Git 管理代码：Git Flow 工作流实战",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2020/2020-12/闭包在组合查询中的使用.md",
       "slug": "closure-in-composite-query",
-      "date": "2023-04-01",
-      "title": "闭包在组合查询中的使用",
+      "title": "闭包在组合查询中的使用：从缓存请求到缓存参数",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2020/2020-style-review.md",
       "slug": "2020-blog-style-review",
-      "date": "2026-05-31",
       "title": "2020 年博客风格诊断",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2026-05-31",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2021/2021-03/aliOSS的自有域名配置和CDN加速.md",
       "slug": "alioss-custom-domain-cdn",
-      "date": "2023-04-01",
-      "title": "aliOSS的自有域名配置和CDN加速",
+      "title": "AliOSS 自有域名配置和 CDN 加速",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2021/2021-03/从PM2到docker,离不开的Nginx.md",
       "slug": "from-pm2-to-docker-nginx",
-      "date": "2023-04-01",
-      "title": "=========== 启动Nginx ========",
+      "title": "从 PM2 到 Docker，离不开的 Nginx",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2021/2021-03/从开始到现在.md",
       "slug": "from-start-to-now",
-      "date": "2023-04-01",
       "title": "从开始到现在",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2021/2021-03/继续进行SEO优化.md",
       "slug": "continue-seo-optimization",
-      "date": "2023-04-01",
       "title": "继续进行SEO优化",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2021/2021-04/2021年度总结.md",
       "slug": "2021-annual-review",
-      "date": "2023-04-01",
-      "title": "2021年度总结",
+      "title": "2021 年度总结",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": "https://cdn.wuh.site/2021-04-07/sss.jpg",
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2021/2021-04/浅尝一下UI设计.md",
       "slug": "a-taste-of-ui-design",
-      "date": "2023-04-01",
-      "title": "浅尝一下UI设计",
+      "title": "浅尝一下 UI 设计",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": "https://cdn.wuh.site/2021-04-18-103230.png",
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2021/2021-05/javascript中的继承.md",
       "slug": "javascript-inheritance",
-      "date": "2023-04-01",
-      "title": "javascript中的继承",
+      "title": "JavaScript 中的继承",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": "https://cdn.wuh.site/2021-05/2021-05-10-081908.png",
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2021/2021-05/搬山计划.md",
       "slug": "mountain-moving-plan",
-      "date": "2023-04-01",
       "title": "搬山计划",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2021/2021-07/docker镜像的制作与使用.md",
       "slug": "docker-image-creation-and-usage",
-      "date": "2023-04-01",
-      "title": "docker镜像的制作与使用",
+      "title": "Docker 镜像的制作与使用",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": "https://cdn.wuh.site/2021-08/2021-08-29-090210.png",
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2021/2021-09/docker中的volume实践.md",
       "slug": "docker-volume-in-practice",
-      "date": "2023-04-01",
-      "title": "docker中的volume实践",
+      "title": "Docker Volume 数据卷实践",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2021/2021-09/ssh免密登录.md",
       "slug": "ssh-passwordless-login",
-      "date": "2023-04-01",
-      "title": "ssh免密登录",
+      "title": "SSH 免密登录",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2021/2021-11/Clashx 在 Mac 、Win10和Android 平台的使用.md",
       "slug": "clashx-on-mac-win10-android",
-      "date": "2023-04-01",
-      "title": "Clashx 在 Mac 、Win10和Android 平台的使用",
+      "title": "ClashX 在 Mac、Win10 和 Android 平台的使用",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": "https://cdn.wuh.site/2021-12/2021-12-05-021507.png",
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2021/2021-11/基于TS重构Nextjs应用.md",
       "slug": "refactor-nextjs-app-with-typescript",
-      "date": "2023-04-01",
-      "title": "==================== Deps ==============",
+      "title": "基于 TS 重构 Next.js 应用",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": "https://cdn.wuh.site/2021-12/2021-12-05-020136.png",
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2021/2021-12/github actions.md",
       "slug": "github-actions",
-      "date": "2023-04-01",
-      "title": "github actions",
+      "title": "Github Actions 入门",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": "https://cdn.wuh.site/2021-12/2021-12-13-135531.png",
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2022/2022-01/2022年度总结.md",
       "slug": "2022-annual-review",
-      "date": "2023-04-01",
       "title": "2022年度总结",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": "https://cdn.wuh.site/2022-02/2022-02-08-124302.png",
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2022/2022-03/丧钟为谁而鸣.md",
       "slug": "for-whom-the-bell-tolls",
-      "date": "2023-04-01",
       "title": "丧钟为谁而鸣",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": "https://cdn.wuh.site/2022-02/2022-04-04-%E5%B0%81%E9%9D%A2%E5%9B%BE.key.001.png",
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2022/2022-09/进取.md",
       "slug": "enterprising",
-      "date": "2023-04-01",
       "title": "进取",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": "https://cdn.wuh.site/2022-09/20220901.001.png",
+      "date": "2023-04-01",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2023/2023-06/如何使用zlibrary.md",
       "slug": "how-to-use-zlibrary",
-      "date": "2023-06-11",
-      "title": "如何使用zlibrary",
+      "title": "如何使用 zLibrary",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": "https://cdn.wuh.site/2023-06/2023-06-11-030612.png",
+      "date": "2023-06-11",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2024/2024-04/使用vitepress搭建wiki.md",
       "slug": "build-wiki-with-vitepress",
-      "date": "2024-04-13",
-      "title": "https://vitepress.dev/reference/default-theme-home-page",
+      "title": "使用 VitePress 搭建 Wiki",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": "https://cdn.wuh.site/2024-04/2024-04-13-073812.png",
+      "date": "2024-04-13",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2024/2024-10/docker配置镜像源.md",
       "slug": "docker-registry-mirrors",
-      "date": "2024-10-20",
-      "title": "docker配置镜像源",
+      "title": "Docker 配置镜像源",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": "https://cdn.wuh.site/2024-09/2024-10-20-081939.png",
+      "date": "2024-10-20",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2024/2024-11/使用docker部署mongodb服务.md",
       "slug": "deploy-mongodb-with-docker",
-      "date": "2024-11-10",
-      "title": "使用docker部署mongodb服务",
+      "title": "使用 Docker 部署 MongoDB 服务",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": "https://cdn.wuh.site/2024-10/2024-11-16-024447.png",
+      "date": "2024-11-10",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2026/2026-03/vide coding - codex.md",
       "slug": "vibe-coding-codex",
-      "date": "2026-03-07",
-      "title": "vide coding - codex",
+      "title": "codex的开发范式",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2026-03-07",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2026/2026-04/2026-04-19.md",
       "slug": "2026-04-19",
-      "date": "2026-04-19",
       "title": "2026-04-19",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2026-04-19",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2026/2026-04/2026-04-26.md",
       "slug": "2026-04-26",
-      "date": "2026-04-26",
       "title": "2026-04-26",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2026-04-26",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2026/2026-04/西江月·微醺独倚明廊.md",
       "slug": "xijiangyue-poem",
-      "date": "2026-04-18",
-      "title": "西江月·微醺独倚明廊",
+      "title": "西江月",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2026-04-18",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2026/2026-04/魔方.md",
       "slug": "rubiks-cube",
-      "date": "2026-04-26",
       "title": "魔方",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2026-04-26",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2026/2026-05/Hermes Agent 使用.md",
       "slug": "hermes-agent-usage",
-      "date": "2026-05-03",
       "title": "Hermes Agent 使用",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": "https://p.ipic.vip/6defmn.png",
+      "date": "2026-05-03",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2026/2026-05/claude 个人用工作流.md",
       "slug": "claude-personal-workflow",
-      "date": "2026-05-17",
-      "title": "1. 主仓库提交 openspec 文档",
+      "title": "Claude 个人用工作流：从一堆规则到一个技能集合",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": "./assets/openspec-superpowers-w",
+      "date": "2026-05-17",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2026/2026-05/系统级的CLAUDE.md",
       "slug": "system-level-claude-md",
-      "date": "2026-05-03",
-      "title": "系统级的CLAUDE",
+      "title": "行为准则",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2026-05-03",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2026/2026-06/重启计划.md",
       "slug": "restart-plan",
-      "date": "2026-06-21",
       "title": "重启计划",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2026-06-21",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2026/2026-07/2026-07-13-ai-workflow-governance.md",
       "slug": "ai-workflow-governance",
-      "date": "2026-07-13",
       "title": "AI 工作流真正解决的，不是写代码，而是治理执行过程",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2026-07-13",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2026/2026-07/2026-07-13-component-knowledge-system.md",
       "slug": "component-knowledge-system",
-      "date": "2026-07-13",
       "title": "组件知识体系真正要解决的，不是查文档，而是减少猜测",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2026-07-13",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2026/2026-07/2026-07-13-yaml-contracts-for-ai-execution.md",
       "slug": "yaml-contracts-for-ai-execution",
-      "date": "2026-07-13",
       "title": "为什么我开始用 YAML 约束 AI 的执行步骤",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2026-07-13",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2026/2026-07/AI 工作流能够解决什么问题.md",
       "slug": "what-ai-workflow-can-solve",
-      "date": "2026-07-13",
       "title": "AI 工作流能够解决什么问题",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2026-07-13",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2026/2026-07/为什么需要约束 AI 的执行工作流.md",
       "slug": "why-constrain-ai-workflow",
-      "date": "2026-07-13",
       "title": "为什么需要约束 AI 的执行工作流",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2026-07-13",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2026/2026-07/再读《坐忘歌》.md",
       "slug": "rereading-zuowang-ge",
-      "date": "2026-07-04",
       "title": "再读《坐忘歌》",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": "https://cdn.wuh.site/2026-07/1783254259449_download.png",
+      "date": "2026-07-04",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     },
     {
       "path": "docs/2026/2026-07/组件知识体系必要性探索.md",
       "slug": "component-knowledge-necessity",
-      "date": "2026-07-13",
       "title": "组件知识体系必要性探索",
+      "titleFrom": "fm",
       "type": "post",
-      "status": "keep-existing-slug",
-      "actions": [
-        "merge"
-      ]
+      "cover": null,
+      "date": "2026-07-13",
+      "status": "complete",
+      "add": [],
+      "labelsToRename": false
     }
   ]
 }
