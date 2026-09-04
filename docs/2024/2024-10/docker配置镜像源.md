@@ -1,3 +1,8 @@
+---
+slug: docker-registry-mirrors
+date: 2024-10-20
+---
+
 ## Docker 配置镜像源
 
 > **摘要：** 从 Docker Desktop 换到 podman 后配置镜像源的方法：修改 `daemon.json` 或用 `docker run` 直接指定代理域名。

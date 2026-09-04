@@ -1,3 +1,8 @@
+---
+slug: github-actions
+date: 2023-04-01
+---
+
 ## Github Actions 入门
 
 > **摘要：** Github Actions 的本质是事件驱动的自动化工作流，配合 Docker 可以实现镜像自动编译推送和 Release 版本管理。

@@ -1,3 +1,8 @@
+---
+slug: build-wiki-with-vitepress
+date: 2024-04-13
+---
+
 ## 使用 VitePress 搭建 Wiki
 
 > **摘要：** 用 VitePress 搭建个人 wiki，通过自定义 Vite 插件自动生成 sidebar 和 nav，配合 GitHub Actions 自动构建发布。

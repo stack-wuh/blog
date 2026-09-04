@@ -1,3 +1,8 @@
+---
+slug: clashx-on-mac-win10-android
+date: 2023-04-01
+---
+
 ## ClashX 在 Mac、Win10 和 Android 平台的使用
 
 > **摘要：** ClashX 在三个平台的使用方法：Mac 上零配置、Win10 需配合 SwitchyOmega 插件、Android 直接导入订阅地址。

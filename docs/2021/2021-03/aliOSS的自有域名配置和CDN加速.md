@@ -1,3 +1,8 @@
+---
+slug: alioss-custom-domain-cdn
+date: 2023-04-01
+---
+
 ## AliOSS 自有域名配置和 CDN 加速
 
 > **摘要：** OSS 配合 CDN 加速三步走：DNS 配置二级域名、SSL 证书申请与部署、CDN 缓存策略设置。

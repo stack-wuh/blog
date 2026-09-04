@@ -1,3 +1,8 @@
+---
+slug: from-pm2-to-docker-nginx
+date: 2023-04-01
+---
+
 ## 从 PM2 到 Docker，离不开的 Nginx
 
 > **摘要：** 博客部署从 PM2 进程守护升级到 Docker 容器化，Nginx 始终作为反向代理和静态资源服务的核心。

@@ -1,3 +1,8 @@
+---
+slug: claude-personal-workflow
+date: 2026-05-17
+---
+
 ## Claude 个人用工作流：从一堆规则到一个技能集合
 
 ![openspec-superpowers-workflow.html](./assets/openspec-superpowers-w       

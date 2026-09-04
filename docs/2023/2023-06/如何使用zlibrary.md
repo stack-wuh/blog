@@ -1,3 +1,8 @@
+---
+slug: how-to-use-zlibrary
+date: 2023-06-11
+---
+
 ## 如何使用 zLibrary
 
 > **摘要：** 微信读书开始限制免费阅读后，通过 Telegram 机器人找到 zLibrary 镜像站，配合科学上网继续免费获取电子书资源。

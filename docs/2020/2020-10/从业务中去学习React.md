@@ -1,3 +1,8 @@
+---
+slug: learn-react-from-business
+date: 2023-04-01
+---
+
 ## 从业务中学习 React：五种组件通讯方式对比
 
 > **摘要：** React 的组件通讯从 Props/Events 到 Redux，本质是从父子单线传递到全局状态管理的演进，每种方式适用于不同的组件关系层级。

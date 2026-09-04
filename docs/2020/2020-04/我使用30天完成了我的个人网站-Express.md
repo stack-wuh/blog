@@ -1,3 +1,8 @@
+---
+slug: 30-days-personal-website-express
+date: 2023-04-01
+---
+
 ## 我用 30 天完成了个人网站（下）：Express + MongoDB 后台实践
 
 > **摘要：** 后台开发没有想象中复杂，Express + MongoDB 的组合让前端可以快速涉足服务端。

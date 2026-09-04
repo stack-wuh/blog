@@ -1,3 +1,8 @@
+---
+slug: refactor-nextjs-app-with-typescript
+date: 2023-04-01
+---
+
 ## 基于 TS 重构 Next.js 应用
 
 > **摘要：** 用 TypeScript + Sass 重写博客前端，按 Ant Design 规范设计组件，配合 Docker 分段构建 + Github Actions 实现自动部署。

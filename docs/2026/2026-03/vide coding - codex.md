@@ -1,3 +1,8 @@
+---
+slug: vibe-coding-codex
+date: 2026-03-07
+---
+
 ## codex的开发范式
 
 在使用 Vibe Coding 的过程中，Codex 应如何规范开发范式?

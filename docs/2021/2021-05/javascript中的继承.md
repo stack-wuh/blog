@@ -1,3 +1,8 @@
+---
+slug: javascript-inheritance
+date: 2023-04-01
+---
+
 ## JavaScript 中的继承
 
 > **摘要：** JS 继承方案从原型链、构造函数、组合、原型式、寄生式到寄生组合的演进，ES6 的 class extends 本质仍是寄生组合继承的语法糖。

@@ -1,3 +1,8 @@
+---
+slug: koajs-2-minimal-koa-server
+date: 2023-04-01
+---
+
 ## 创建一个简单的koa服务
 
 ### 1. 创建一个工程目录

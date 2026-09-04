@@ -1,3 +1,8 @@
+---
+slug: hermes-agent-usage
+date: 2026-05-03
+---
+
 ## Hermes Agent 使用
 
 ![image-20260501110436836](https://p.ipic.vip/6defmn.png)

@@ -1,3 +1,8 @@
+---
+slug: ssh-passwordless-login
+date: 2023-04-01
+---
+
 ## SSH 免密登录
 
 > **摘要：** 用 `ssh-keygen` 生成密钥对，将公钥推送到服务器并配置权限，实现免密登录云服务器。
@@ -90,6 +95,4 @@ Host aliyun
 ### 参考资料
 
 + [SSH 免密登陆配置](https://segmentfault.com/a/1190000021000360)
-
-
 

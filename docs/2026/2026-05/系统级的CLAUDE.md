@@ -1,3 +1,8 @@
+---
+slug: system-level-claude-md
+date: 2026-05-03
+---
+
 ## 行为准则
 
 ### 1. 先想清楚再写代码
