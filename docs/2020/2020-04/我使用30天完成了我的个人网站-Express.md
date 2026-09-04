@@ -1,7 +1,10 @@
 ---
 slug: 30-days-personal-website-express
 date: 2023-04-01
+title: 我用 30 天完成了个人网站（下）：Express + MongoDB 后台实践
+type: post
 ---
+
 
 ## 我用 30 天完成了个人网站（下）：Express + MongoDB 后台实践
 

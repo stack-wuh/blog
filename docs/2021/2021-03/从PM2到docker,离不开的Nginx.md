@@ -1,7 +1,10 @@
 ---
 slug: from-pm2-to-docker-nginx
 date: 2023-04-01
+title: 从 PM2 到 Docker，离不开的 Nginx
+type: post
 ---
+
 
 ## 从 PM2 到 Docker，离不开的 Nginx
 

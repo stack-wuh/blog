@@ -1,7 +1,11 @@
 ---
 slug: refactor-nextjs-app-with-typescript
 date: 2023-04-01
+title: 基于 TS 重构 Next.js 应用
+type: post
+cover: https://cdn.wuh.site/2021-12/2021-12-05-020136.png
 ---
+
 
 ## 基于 TS 重构 Next.js 应用
 

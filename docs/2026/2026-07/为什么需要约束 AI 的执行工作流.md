@@ -1,7 +1,10 @@
 ---
 slug: why-constrain-ai-workflow
 date: 2026-07-13
+title: 为什么需要约束 AI 的执行工作流
+type: post
 ---
+
 
 # 为什么需要约束 AI 的执行工作流
 

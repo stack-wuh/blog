@@ -1,7 +1,10 @@
 ---
 slug: 2020-blog-style-review
 date: 2026-05-31
+title: 2020 年博客风格诊断
+type: post
 ---
+
 
 # 2020 年博客风格诊断
 

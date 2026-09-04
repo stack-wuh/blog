@@ -1,7 +1,11 @@
 ---
 slug: a-taste-of-ui-design
 date: 2023-04-01
+title: 浅尝一下 UI 设计
+type: post
+cover: https://cdn.wuh.site/2021-04-18-103230.png
 ---
+
 
 ## 浅尝一下 UI 设计
 

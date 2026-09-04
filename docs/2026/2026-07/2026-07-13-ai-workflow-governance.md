@@ -1,7 +1,10 @@
 ---
 slug: ai-workflow-governance
 date: 2026-07-13
+title: AI 工作流真正解决的，不是写代码，而是治理执行过程
+type: post
 ---
+
 
 # AI 工作流真正解决的，不是写代码，而是治理执行过程
 

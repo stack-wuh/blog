@@ -1,7 +1,10 @@
 ---
 slug: yaml-contracts-for-ai-execution
 date: 2026-07-13
+title: 为什么我开始用 YAML 约束 AI 的执行步骤
+type: post
 ---
+
 
 # 为什么我开始用 YAML 约束 AI 的执行步骤
 

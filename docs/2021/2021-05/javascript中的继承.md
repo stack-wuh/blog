@@ -1,7 +1,11 @@
 ---
 slug: javascript-inheritance
 date: 2023-04-01
+title: JavaScript 中的继承
+type: post
+cover: https://cdn.wuh.site/2021-05/2021-05-10-081908.png
 ---
+
 
 ## JavaScript 中的继承
 

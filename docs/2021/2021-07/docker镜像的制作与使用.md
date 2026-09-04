@@ -1,7 +1,11 @@
 ---
 slug: docker-image-creation-and-usage
 date: 2023-04-01
+title: Docker 镜像的制作与使用
+type: post
+cover: https://cdn.wuh.site/2021-08/2021-08-29-090210.png
 ---
+
 
 
 

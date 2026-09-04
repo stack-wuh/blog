@@ -1,7 +1,11 @@
 ---
 slug: deploy-mongodb-with-docker
 date: 2024-11-10
+title: 使用 Docker 部署 MongoDB 服务
+type: post
+cover: https://cdn.wuh.site/2024-10/2024-11-16-024447.png
 ---
+
 
 ## 使用 Docker 部署 MongoDB 服务
 

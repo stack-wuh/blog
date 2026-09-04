@@ -1,7 +1,11 @@
 ---
 slug: docker-registry-mirrors
 date: 2024-10-20
+title: Docker 配置镜像源
+type: post
+cover: https://cdn.wuh.site/2024-09/2024-10-20-081939.png
 ---
+
 
 ## Docker 配置镜像源
 

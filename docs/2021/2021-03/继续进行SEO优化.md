@@ -1,7 +1,10 @@
 ---
 slug: continue-seo-optimization
 date: 2023-04-01
+title: 继续进行SEO优化
+type: post
 ---
+
 
 ## 继续进行SEO优化
 

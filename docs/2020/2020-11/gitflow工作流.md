@@ -1,7 +1,10 @@
 ---
 slug: gitflow-workflow
 date: 2023-04-01
+title: 如何使用 Git 管理代码：Git Flow 工作流实战
+type: post
 ---
+
 
 ## 如何使用 Git 管理代码：Git Flow 工作流实战
 

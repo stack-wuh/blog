@@ -1,7 +1,10 @@
 ---
 slug: component-knowledge-system
 date: 2026-07-13
+title: 组件知识体系真正要解决的，不是查文档，而是减少猜测
+type: post
 ---
+
 
 # 组件知识体系真正要解决的，不是查文档，而是减少猜测
 

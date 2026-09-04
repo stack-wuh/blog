@@ -1,7 +1,10 @@
 ---
 slug: js-print-page-content
 date: 2023-04-01
+title: jsPrint：用 jQuery 插件替代原生打印的方案
+type: post
 ---
+
 
 ## jsPrint：用 jQuery 插件替代原生打印的方案
 

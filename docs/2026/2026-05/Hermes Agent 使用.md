@@ -1,7 +1,11 @@
 ---
 slug: hermes-agent-usage
 date: 2026-05-03
+title: Hermes Agent 使用
+type: post
+cover: https://p.ipic.vip/6defmn.png
 ---
+
 
 ## Hermes Agent 使用
 

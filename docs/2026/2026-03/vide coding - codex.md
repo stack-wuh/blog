@@ -1,7 +1,10 @@
 ---
 slug: vibe-coding-codex
 date: 2026-03-07
+title: codex的开发范式
+type: post
 ---
+
 
 ## codex的开发范式
 

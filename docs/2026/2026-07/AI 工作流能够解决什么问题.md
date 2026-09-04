@@ -1,7 +1,10 @@
 ---
 slug: what-ai-workflow-can-solve
 date: 2026-07-13
+title: AI 工作流能够解决什么问题
+type: post
 ---
+
 
 # AI 工作流能够解决什么问题
 

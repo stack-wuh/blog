@@ -1,7 +1,11 @@
 ---
 slug: clashx-on-mac-win10-android
 date: 2023-04-01
+title: ClashX 在 Mac、Win10 和 Android 平台的使用
+type: post
+cover: https://cdn.wuh.site/2021-12/2021-12-05-021507.png
 ---
+
 
 ## ClashX 在 Mac、Win10 和 Android 平台的使用
 

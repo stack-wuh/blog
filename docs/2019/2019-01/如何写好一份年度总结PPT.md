@@ -1,7 +1,10 @@
 ---
 slug: how-to-write-annual-review-ppt
 date: 2023-04-01
+title: 如何写好一份年度总结PPT
+type: post
 ---
+
 
 ## 如何写好一份年度总结PPT
 

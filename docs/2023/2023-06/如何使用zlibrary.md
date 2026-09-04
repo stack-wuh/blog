@@ -1,7 +1,11 @@
 ---
 slug: how-to-use-zlibrary
 date: 2023-06-11
+title: 如何使用 zLibrary
+type: post
+cover: https://cdn.wuh.site/2023-06/2023-06-11-030612.png
 ---
+
 
 ## 如何使用 zLibrary
 

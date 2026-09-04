@@ -1,7 +1,10 @@
 ---
 slug: js-inheritance-learning
 date: 2024-04-06
+title: JS 继承：原型链、组合与寄生组合的实现与取舍
+type: post
 ---
+
 
 ## JS 继承：原型链、组合与寄生组合的实现与取舍
 

@@ -1,7 +1,10 @@
 ---
 slug: koajs-2-minimal-koa-server
 date: 2023-04-01
+title: 创建一个简单的koa服务
+type: note
 ---
+
 
 ## 创建一个简单的koa服务
 

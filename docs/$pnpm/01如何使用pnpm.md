@@ -1,7 +1,10 @@
 ---
 slug: pnpm-01-getting-started
 date: 2024-12-15
+title: 什么是pnpm
+type: note
 ---
+
 
 ## 什么是pnpm
 

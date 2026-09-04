@@ -1,7 +1,11 @@
 ---
 slug: learn-react-from-business
 date: 2023-04-01
+title: 从业务中学习 React：五种组件通讯方式对比
+type: post
+cover: https://source-1300700534.cos.ap-shenzhen-fsi.myqcloud.com/2020-10-07-083409.png
 ---
+
 
 ## 从业务中学习 React：五种组件通讯方式对比
 

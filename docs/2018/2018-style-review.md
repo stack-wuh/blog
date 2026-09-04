@@ -1,7 +1,10 @@
 ---
 slug: 2018-blog-style-review
 date: 2026-05-31
+title: 2018 年博客风格诊断与改写建议
+type: post
 ---
+
 
 # 2018 年博客风格诊断与改写建议
 

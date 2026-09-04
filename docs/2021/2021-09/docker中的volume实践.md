@@ -1,7 +1,10 @@
 ---
 slug: docker-volume-in-practice
 date: 2023-04-01
+title: Docker Volume 数据卷实践
+type: post
 ---
+
 
 ## Docker Volume 数据卷实践
 

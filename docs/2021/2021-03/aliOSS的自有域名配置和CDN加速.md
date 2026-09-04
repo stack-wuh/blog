@@ -1,7 +1,10 @@
 ---
 slug: alioss-custom-domain-cdn
 date: 2023-04-01
+title: AliOSS 自有域名配置和 CDN 加速
+type: post
 ---
+
 
 ## AliOSS 自有域名配置和 CDN 加速
 

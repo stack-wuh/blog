@@ -1,7 +1,11 @@
 ---
 slug: build-wiki-with-vitepress
 date: 2024-04-13
+title: 使用 VitePress 搭建 Wiki
+type: post
+cover: https://cdn.wuh.site/2024-04/2024-04-13-073812.png
 ---
+
 
 ## 使用 VitePress 搭建 Wiki
 

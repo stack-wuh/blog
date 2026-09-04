@@ -1,7 +1,10 @@
 ---
 slug: system-level-claude-md
 date: 2026-05-03
+title: 行为准则
+type: post
 ---
+
 
 ## 行为准则
 

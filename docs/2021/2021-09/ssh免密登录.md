@@ -1,7 +1,10 @@
 ---
 slug: ssh-passwordless-login
 date: 2023-04-01
+title: SSH 免密登录
+type: post
 ---
+
 
 ## SSH 免密登录
 

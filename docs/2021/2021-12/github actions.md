@@ -1,7 +1,11 @@
 ---
 slug: github-actions
 date: 2023-04-01
+title: Github Actions 入门
+type: post
+cover: https://cdn.wuh.site/2021-12/2021-12-13-135531.png
 ---
+
 
 ## Github Actions 入门
 
