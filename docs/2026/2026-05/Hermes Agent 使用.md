@@ -1,3 +1,10 @@
+---
+title: Hermes Agent 使用
+labels: [AI, 工具]
+summary: Hermes Agent 的使用过程截图记录。
+keywords: [Hermes, AI Agent]
+---
+
 ## Hermes Agent 使用
 
 ![image-20260501110436836](https://p.ipic.vip/6defmn.png)

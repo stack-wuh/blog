@@ -1,4 +1,11 @@
-## codex的开发范式
+---
+title: Codex 的开发范式
+labels: [AI, 工作流]
+summary: 在 Vibe Coding 里，Codex 不应只是"写代码机器"，而应被规范成"按契约执行的工程代理"——角色边界、任务契约、开发流程与质量门禁。
+keywords: [Codex, Vibe Coding, AI, 开发规范]
+---
+
+## codex 的开发范式
 
 在使用 Vibe Coding 的过程中，Codex 应如何规范开发范式?
 

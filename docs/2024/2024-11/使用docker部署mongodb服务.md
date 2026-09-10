@@ -1,3 +1,10 @@
+---
+title: 使用 Docker 部署 MongoDB 服务
+labels: [Docker, MongoDB]
+summary: 使用 Docker 部署 MongoDB 时遇到的四个常见问题：镜像拉取超时、脚本自动化、Docker daemon 连接错误、容器内新增权限用户。
+keywords: [Docker, MongoDB, 部署]
+---
+
 ## 使用 Docker 部署 MongoDB 服务
 
 > **摘要：** 使用 Docker 部署 MongoDB 时遇到的四个常见问题：镜像拉取超时、脚本自动化、Docker daemon 连接错误、容器内新增权限用户。
@@ -14,8 +21,8 @@
 
 解决：
 
-1. 使用其他的代理镜像源，参考文档https://www.coderjia.cn/archives/dba3f94c-a021-468a-8ac6-e840f85867ea
-2. 重启docker服务 sudo systemctl daemon-reload && sudo systemctl restart docker
+1. 使用其他的代理镜像源，参考文档 https://www.coderjia.cn/archives/dba3f94c-a021-468a-8ac6-e840f85867ea
+2. 重启 docker 服务 sudo systemctl daemon-reload && sudo systemctl restart docker
 
 
 
@@ -23,8 +30,8 @@
 
 解决：
 
-1. 首先编辑一个.sh后缀的脚本文件
-2. 给.sh文件授权，chmod   +x    **.sh
+1. 首先编辑一个.sh 后缀的脚本文件
+2. 给.sh 文件授权，chmod   +x    **.sh
 
 参考文档:https://www.cnblogs.com/linuxprobe/p/15270358.html
 
@@ -32,15 +39,15 @@
 
 问题三: `Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?`
 
-重启docker的服务， systemctl stop docker & systemctl stop docker.sock &  systemctl start docker
+重启 docker 的服务， systemctl stop docker & systemctl stop docker.sock &  systemctl start docker
 
 
 
-问题四： 如何进入mongo的容器新增权限用户
+问题四： 如何进入 mongo 的容器新增权限用户
 
 $ docker exec -it mongodb.service bash
 
-我一直想在容器里面去新增权限用户，但是其实不用，我用mongodb官方提供的GUI工具mongodb compass直接进它的shell控制台，执行权限代码就可以了。
+我一直想在容器里面去新增权限用户，但是其实不用，我用 mongodb 官方提供的 GUI 工具 mongodb compass 直接进它的 shell 控制台，执行权限代码就可以了。
 
 
 

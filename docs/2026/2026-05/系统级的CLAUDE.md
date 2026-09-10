@@ -1,3 +1,10 @@
+---
+title: 系统级的 CLAUDE.md
+labels: [AI, Claude]
+summary: 系统级 CLAUDE.md 配置沉淀：行为准则、工作流程、铁律与 OpenSpec 命名规范。
+keywords: [CLAUDE.md, OpenSpec, 行为准则]
+---
+
 ## 行为准则
 
 ### 1. 先想清楚再写代码

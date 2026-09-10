@@ -1,3 +1,10 @@
+---
+title: Claude 个人用工作流：从一堆规则到一个技能集合
+labels: [AI, Claude]
+summary: 将 548 行的单体 skill 拆成入口 + 6 个子 skill + rules 分层，从 OpenSpec 生态升级到 Superpowers 生态的架构设计与取舍。
+keywords: [Claude Code, Skill, OpenSpec, Superpowers]
+---
+
 ## Claude 个人用工作流：从一堆规则到一个技能集合
 
 ![openspec-superpowers-workflow.html](./assets/openspec-superpowers-w       
@@ -151,7 +158,7 @@ apply 完成后的质量门禁。先跑 `superpowers:verification-before-complet
 | 2 | 需求覆盖 | 按 spec 的 GIVEN/WHEN/THEN 逐条对照 |
 | 3 | 设计一致性 | 实现是否匹配 design.md |
 | 4 | ESLint | error 阻塞 / warning 由用户决定 |
-| 5 | 代码质量 | 重复代码、过长函数（>50行）、过深嵌套（>3层） |
+| 5 | 代码质量 | 重复代码、过长函数（>50 行）、过深嵌套（>3 层） |
 | 6 | 安全性 | 注入风险、敏感信息泄露、权限控制 |
 | 7 | 性能 + 变更范围 | N+1 查询、超出 proposal 范围的改动 |
 

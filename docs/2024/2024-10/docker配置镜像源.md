@@ -1,10 +1,17 @@
+---
+title: Docker 配置镜像源
+labels: [Docker, 运维]
+summary: 从 Docker Desktop 换到 podman 后配置镜像源的方法：修改 daemon.json 或用 docker run 直接指定代理域名。
+keywords: [Docker, podman, 镜像源]
+---
+
 ## Docker 配置镜像源
 
 > **摘要：** 从 Docker Desktop 换到 podman 后配置镜像源的方法：修改 `daemon.json` 或用 `docker run` 直接指定代理域名。
 
 ---
 
-之前用的Docker Desktop 这个工具可以直接在面板里面改，现在换成了podman，面板里面没有位置可以编辑了，在网上找了一些方法来解决问题。
+之前用的 Docker Desktop 这个工具可以直接在面板里面改，现在换成了 podman，面板里面没有位置可以编辑了，在网上找了一些方法来解决问题。
 
 
 
@@ -41,8 +48,8 @@ docker run -d -P m.daocloud.io/docker.io/library/mongo
 
 
 
-除此之外，还有另一种方法，直接用docker把容器跑起来，在镜像前面把代理的域名加上去就可以了。我就是没有把podman的代理问题解决，改用了这种方式，可以快速搞定。
+除此之外，还有另一种方法，直接用 docker 把容器跑起来，在镜像前面把代理的域名加上去就可以了。我就是没有把 podman 的代理问题解决，改用了这种方式，可以快速搞定。
 
 
 
-在github上面找到了一个收集代理源[仓库[public-image-mirror](https://github.com/DaoCloud/public-image-mirror)](https://github.com/DaoCloud/public-image-mirror)
+在 github 上面找到了一个收集代理源[仓库[public-image-mirror](https://github.com/DaoCloud/public-image-mirror)](https://github.com/DaoCloud/public-image-mirror)

@@ -1,3 +1,10 @@
+---
+title: 使用 VitePress 搭建 Wiki
+labels: [VitePress, 前端]
+summary: 用 VitePress 搭建个人 wiki，通过自定义 Vite 插件自动生成 sidebar 和 nav，配合 GitHub Actions 自动构建发布。
+keywords: [VitePress, Vite 插件, Wiki, GitHub Actions]
+---
+
 ## 使用 VitePress 搭建 Wiki
 
 > **摘要：** 用 VitePress 搭建个人 wiki，通过自定义 Vite 插件自动生成 sidebar 和 nav，配合 GitHub Actions 自动构建发布。
@@ -8,26 +15,26 @@
 
 ![image-20240413170409041](https://cdn.wuh.site/2024-04/2024-04-13-090412.png)
 
-前面几个月一直在学习bebal、eslint这种AST相关的知识，一直没有时间去写一篇正儿八经的博客，刚好体验了一下vitepress，在这里记录一下我是如何使用vitepress将我的知识仓库[blog](https://github.com/stack-wuh/blog)做成**wiki**的。
+前面几个月一直在学习 bebal、eslint 这种 AST 相关的知识，一直没有时间去写一篇正儿八经的博客，刚好体验了一下 vitepress，在这里记录一下我是如何使用 vitepress 将我的知识仓库[blog](https://github.com/stack-wuh/blog)做成**wiki**的。
 
 ![image-20240413153919880](https://cdn.wuh.site/2024-04/2024-04-13-073922.png)
 
-先展示一下我的文件目录结构，所有文件全部放在**docs**目录下，例如AST、Koa和工作周报这种比较特殊的文件夹是以关键字命名，剩余的博客全部是以年份，年份-月份，年份-月份-博客标题方式命名。
+先展示一下我的文件目录结构，所有文件全部放在**docs**目录下，例如 AST、Koa 和工作周报这种比较特殊的文件夹是以关键字命名，剩余的博客全部是以年份，年份-月份，年份-月份-博客标题方式命名。
 
-在vitepress的环境中，可以直接指定其工作目录为**docs**这样我们就可以快速地搭建出项目的基本目录。至于如何使用vitepress大家可以快速移步至[vitepress的官网](https://vitepress.dev/zh/guide/getting-started)。在这里不做过多的介绍，浪费大家太多的时间，使用的步骤非常简单。
+在 vitepress 的环境中，可以直接指定其工作目录为**docs**这样我们就可以快速地搭建出项目的基本目录。至于如何使用 vitepress 大家可以快速移步至[vitepress 的官网](https://vitepress.dev/zh/guide/getting-started)。在这里不做过多的介绍，浪费大家太多的时间，使用的步骤非常简单。
 
 下面列出大家可能需要解决的问题:
 
-1. vitepress不会自动生成菜单和导航，需要你自己维护
-2. vitepress采用约定式路由，文件路径即为路由地址
+1. vitepress 不会自动生成菜单和导航，需要你自己维护
+2. vitepress 采用约定式路由，文件路径即为路由地址
 3. 分组维护菜单时必须保证其键值与路由匹配
-4. 配合github actoins自动构建发布wiki
+4. 配合 github actoins 自动构建发布 wiki
 
 ### 一、如何自动生成菜单
 
-为了处理上述的问题一与问题二，我们必须先认识一下vitepress的配置文件。在我们执行vitepress的init指令后，会在工作目录下生成**index.md**文件与**.vitepress**目录。
+为了处理上述的问题一与问题二，我们必须先认识一下 vitepress 的配置文件。在我们执行 vitepress 的 init 指令后，会在工作目录下生成**index.md**文件与**.vitepress**目录。
 
-其中，**index.md**文件就是项目的首页，在这个页面中可以维护这个网站的快捷入口、标题、描述，具体的就是下面这个样式，这个模板就是vitepress提供的默认模板。
+其中，**index.md**文件就是项目的首页，在这个页面中可以维护这个网站的快捷入口、标题、描述，具体的就是下面这个样式，这个模板就是 vitepress 提供的默认模板。
 
 ```markdown
 ---
@@ -151,13 +158,13 @@ export default defineConfig({
 
 ```
 
-如果不出意外的话，在你执行**pnpm init**以及 **pnpm dev**之后，会出现由vitepress提供的默认页面。但是你的工作目录下的文件并没有自动生成菜单。
+如果不出意外的话，在你执行**pnpm init**以及 **pnpm dev**之后，会出现由 vitepress 提供的默认页面。但是你的工作目录下的文件并没有自动生成菜单。
 
 现在我们回到刚刚开始的问题，如何自动生成菜单和导航？
 
-有两种方法，第一种是常规方法，把路由一个个在**themeConfig.sidebar**中维护进去，还有一种是利用其编译时的能力，写一个vite插件，直接在编译时改掉vite上下文中的配置文件。
+有两种方法，第一种是常规方法，把路由一个个在**themeConfig.sidebar**中维护进去，还有一种是利用其编译时的能力，写一个 vite 插件，直接在编译时改掉 vite 上下文中的配置文件。
 
-大家回到**config.mjs**文件中，仔细看一下我在**vite**中配置了一个插件[navGenerator](https://github.com/stack-wuh/blog/blob/gh-page/plugins/nav-ganerator/index.js)。在这个插件中我们只需要将文件路径转化为路由地址就可以了，然后在vite的上下文中的themeConfig.sidebar 改写为我们重新生成的对象就可以了。
+大家回到**config.mjs**文件中，仔细看一下我在**vite**中配置了一个插件[navGenerator](https://github.com/stack-wuh/blog/blob/gh-page/plugins/nav-ganerator/index.js)。在这个插件中我们只需要将文件路径转化为路由地址就可以了，然后在 vite 的上下文中的 themeConfig.sidebar 改写为我们重新生成的对象就可以了。
 
 ```javascript
 const navGenerator = () => {
@@ -182,15 +189,15 @@ const navGenerator = () => {
 
 无论是**webpack**还是**vite**它们的构建流程都是链式的，它代表着上一个插件如果改动了上下文中的配置是会影响下一个插件的。所以完全不用去改源文件，只需要改动钩子中暴露出来的**vitepress context**，就可以满足需求。
 
-但是有一个大前提，这个过程必须发生在最终生成文件的的插件之前。我们已知vitepress将md文件转换成html是利用的**markdown-it**插件，所以必须将**navGenerator**插件的触发时间提前。
+但是有一个大前提，这个过程必须发生在最终生成文件的的插件之前。我们已知 vitepress 将 md 文件转换成 html 是利用的**markdown-it**插件，所以必须将**navGenerator**插件的触发时间提前。
 
-正好**configResolved**钩子是最前面的那个入口，而且在此时vitepress已经完成了目录的解析，在此时我们已经可以非常完整地拿到工作目录下全部的md文件了。
+正好**configResolved**钩子是最前面的那个入口，而且在此时 vitepress 已经完成了目录的解析，在此时我们已经可以非常完整地拿到工作目录下全部的 md 文件了。
 
-插件的全部代码可以点击链接在github中的[plugins/nav-generator](https://github.com/stack-wuh/blog/blob/gh-page/plugins/nav-ganerator/index.js)查看。
+插件的全部代码可以点击链接在 github 中的[plugins/nav-generator](https://github.com/stack-wuh/blog/blob/gh-page/plugins/nav-ganerator/index.js)查看。
 
 ---
 
-### 二、如何正确维护多分组sidebar
+### 二、如何正确维护多分组 sidebar
 
 ![image-20240413165436184](https://cdn.wuh.site/2024-04/2024-04-13-085439.png)
 
@@ -202,15 +209,15 @@ const navGenerator = () => {
 
 ![image-20240413170148327](https://cdn.wuh.site/2024-04/2024-04-13-090150.png)
 
-与生成sidebar同理，nav的数据也可以继续利用这种方法生成。最后的效果就是大家看到的封面图那样。
+与生成 sidebar 同理，nav 的数据也可以继续利用这种方法生成。最后的效果就是大家看到的封面图那样。
 
 ---
 
 ### 三、自动构建发布
 
-继续利用我们之前介绍过的**github actions**帮助我们自动构建发布。同样在vitepress的官网中提供的一个[工作流示例](https://vitepress.dev/zh/guide/deploy#github-pages)。
+继续利用我们之前介绍过的**github actions**帮助我们自动构建发布。同样在 vitepress 的官网中提供的一个[工作流示例](https://vitepress.dev/zh/guide/deploy#github-pages)。
 
-**github actions**是一个非常友好的工作流，在之前我已经写了一篇博客，详细地介绍了我是如何actions实现了我的博客项目自动构建发布，可以移步原文[Github Actions 自动部署应用](https://wuh.site/post/Github%20Actions%20%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8)。
+**github actions**是一个非常友好的工作流，在之前我已经写了一篇博客，详细地介绍了我是如何 actions 实现了我的博客项目自动构建发布，可以移步原文[Github Actions 自动部署应用](https://wuh.site/post/Github%20Actions%20%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2%E5%BA%94%E7%94%A8)。
 
 下面是我的[工作流配置文件](https://github.com/stack-wuh/blog/blob/gh-page/.github/workflows/deploy.yaml):
 
@@ -284,15 +291,15 @@ jobs:
 
 ```
 
-在使用**vitepress**搭建wiki库之前，先切一个**gh-page**分支出来，后期我们做自动构建主要是以这个分支为主，而不是master分支。
+在使用**vitepress**搭建 wiki 库之前，先切一个**gh-page**分支出来，后期我们做自动构建主要是以这个分支为主，而不是 master 分支。
 
-注意，我们只需要改几处就可以使github正常工作了:
+注意，我们只需要改几处就可以使 github 正常工作了:
 
-1. 构建分支，将其改为gh-page
-2. 将打包器改为使用pnpm
-3. 将指令也改为pnpm配套指令
+1. 构建分支，将其改为 gh-page
+2. 将打包器改为使用 pnpm
+3. 将指令也改为 pnpm 配套指令
 4. 更改产出文件目录
 
-与此同时，项目内部的**config.mjs**文件产出目录也需要改一下，因为github pages的部署路由会自动在前面加上/blog/，所以项目的basePath也需要加一个前缀/blog/。
+与此同时，项目内部的**config.mjs**文件产出目录也需要改一下，因为 github pages 的部署路由会自动在前面加上/blog/，所以项目的 basePath 也需要加一个前缀/blog/。
 
 到此为止，全部的流程就介绍完啦~~~
