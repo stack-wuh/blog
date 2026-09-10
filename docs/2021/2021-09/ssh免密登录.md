@@ -1,14 +1,21 @@
+---
+title: SSH 免密登录
+labels: [运维, SSH]
+summary: 用 ssh-keygen 生成密钥对，将公钥推送到服务器并配置权限，实现免密登录云服务器。
+keywords: [SSH, ssh-keygen, 免密登录, 运维]
+---
+
 ## SSH 免密登录
 
 > **摘要：** 用 `ssh-keygen` 生成密钥对，将公钥推送到服务器并配置权限，实现免密登录云服务器。
 
 ---
 
-免密登录，用到的就是一个公钥。如果之前在机器上用过github的ssh模式，那你一定还记得，秘钥生成到哪一个文件夹下了。
+免密登录，用到的就是一个公钥。如果之前在机器上用过 github 的 ssh 模式，那你一定还记得，秘钥生成到哪一个文件夹下了。
 
 
 
-用到的指令就一个 **ssh-keygen**,几乎可以不用加任何参数，直接生成一对key文件: `id_rsa.pub`和`id_rsa`
+用到的指令就一个 **ssh-keygen**,几乎可以不用加任何参数，直接生成一对 key 文件: `id_rsa.pub`和`id_rsa`
 
 ```bash
 ssh-keygen --help
@@ -45,7 +52,7 @@ ssh-keygen --help
        		-n namespace -s signature_file [-r revocation_file]
 ```
 
-在本地生成的key文件，推送到服务器上，在此之前先看下服务器的ssh服务开启了没有，没有开启的打开就好。
+在本地生成的 key 文件，推送到服务器上，在此之前先看下服务器的 ssh 服务开启了没有，没有开启的打开就好。
 
 ```shell
 systemctl status sshd
@@ -59,7 +66,7 @@ systemctl start sshd
 
 ```shell
 sudo chmod 700 ~/.ssh
-sudo chmod 600 ~/.ssh/authrized_keys
+sudo chmod 600 ~/.ssh/authorized_keys
 ```
 
 

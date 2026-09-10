@@ -1,3 +1,10 @@
+---
+title: 我用 30 天完成了个人网站（下）：Express + MongoDB 后台实践
+labels: [Node.js, Express]
+summary: 后台开发没有想象中复杂，Express + MongoDB + JWT 的组合让前端可以快速涉足服务端。
+keywords: [Node.js, Express, MongoDB, JWT]
+---
+
 ## 我用 30 天完成了个人网站（下）：Express + MongoDB 后台实践
 
 > **摘要：** 后台开发没有想象中复杂，Express + MongoDB 的组合让前端可以快速涉足服务端。

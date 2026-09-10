@@ -1,3 +1,10 @@
+---
+title: 我用 30 天完成了个人网站（上）：Nginx 配置实践
+labels: [Nginx, 运维]
+summary: 要认识一个技术最快的方法就是直接上手一个项目——反向代理、HTTPS 证书与 HTTP 重定向的 Nginx 配置实践。
+keywords: [Nginx, 反向代理, HTTPS, 部署]
+---
+
 ## 我用 30 天完成了个人网站（上）：Nginx 配置实践
 
 > **摘要：** 要认识一个技术最快的方法就是直接上手一个项目，Nginx 的配置远比想象中简单。
@@ -148,7 +155,7 @@ flag 列表：
 前端项目部署参考 [antd-pro 部署配置](https://pro.ant.design/docs/deploy-cn)，核心配置属性：
 
 | 属性 | 说明 |
-------|------|
+| ---- | ---- |
 | root | 静态文件的绝对地址，指定 dist 文件夹的绝对地址 |
 | index | 指定项目的入口文件（.html/.htm） |
 | location | 用于匹配静态文件和错误页面 |

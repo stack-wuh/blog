@@ -1,3 +1,10 @@
+---
+title: Docker Volume 数据卷实践
+labels: [Docker, 运维]
+summary: 使用 Docker Volume 管理容器数据持久化，`docker volume create` 创建数据卷，`inspect` 查看配置。
+keywords: [Docker, Volume, 数据卷]
+---
+
 ## Docker Volume 数据卷实践
 
 > **摘要：** 使用 Docker Volume 管理容器数据持久化，`docker volume create` 创建数据卷，`inspect` 查看配置。

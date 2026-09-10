@@ -1,4 +1,9 @@
-
+---
+title: Docker 镜像的制作与使用
+labels: [Docker, 运维]
+summary: 将镜像编译从服务器迁移到本地，通过本地制作 → 推送 Docker Hub → 服务器拉取更新的流水线实现部署。
+keywords: [Docker, docker-compose, Docker Hub, 部署]
+---
 
 ## Docker 镜像的制作与使用
 
@@ -8,7 +13,7 @@
 
 ![docker-hub](https://cdn.wuh.site/2021-08/2021-08-29-090210.png)
 
-最近github的速度是在是太慢了，实在是受不了了，所以只好把镜像的编译工作放在了本地。在本地制作镜像然后托管到dockerhub，直接使用线上镜像了。
+最近 github 的速度实在是太慢了，实在是受不了了，所以只好把镜像的编译工作放在了本地。在本地制作镜像然后托管到 dockerhub，直接使用线上镜像了。
 
 **换一句话描述: 之前在服务器做镜像，现在在本地做镜像。**
 
@@ -86,7 +91,7 @@ docker build -t 'shadowu/wuh.site:latest' -t 'shadowu/wuh.site:'$version
 
 
 
-镜像的文件制作``Dockerfile`，可以访问我之前写过的一篇[《从PM2到docker, 离不开的Nginx》](https://wuh.site/post/2021-03/%E4%BB%8EPM2%E5%88%B0docker%2C%20%E7%A6%BB%E4%B8%8D%E5%BC%80%E7%9A%84Nginx),不用写太多，简单制作一下，先让项目可以用docker跑起来，其他的再说。
+镜像的文件制作 `Dockerfile`，可以访问我之前写过的一篇[《从PM2到docker, 离不开的Nginx》](https://wuh.site/post/2021-03/%E4%BB%8EPM2%E5%88%B0docker%2C%20%E7%A6%BB%E4%B8%8D%E5%BC%80%E7%9A%84Nginx),不用写太多，简单制作一下，先让项目可以用docker跑起来，其他的再说。
 
 ---
 
@@ -202,7 +207,7 @@ $ password
 
 以上是使用的频率最多的一些指令，同时我们还会用到 `docker container inspect`和`docker image inspect`，它们是用来查询容器和镜像的基础配置的。
 
-+ 必须删除容器才可以删除创建容器的镜像，而再此之前，必须先停掉容器，才可以删除容器。
++ 必须删除容器才可以删除创建容器的镜像，而在此之前，必须先停掉容器，才可以删除容器。
 + `docker run`和`docker create` 在创建容器的时候，其实没啥大区别，需要注意的是，最好加上`-it`配置，在容器正常启动后会返回容器id
 + 就用`docker-compose`，有了它一切变得简单起来
 

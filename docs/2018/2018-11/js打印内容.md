@@ -1,3 +1,10 @@
+---
+title: jsPrint：用 jQuery 插件替代原生打印的方案
+labels: [JavaScript, jQuery]
+summary: 原生 window.print() 需要内联样式侵入 DOM，用 jqprint.js 可以在不破坏结构的前提下实现指定区域的打印。
+keywords: [JavaScript, jQuery, jqprint, 打印]
+---
+
 ## jsPrint：用 jQuery 插件替代原生打印的方案
 
 > **摘要：** 原生 `window.print()` 需要内联样式侵入 DOM，用 `jqprint.js` 可以在不破坏结构的前提下实现打印。

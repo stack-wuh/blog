@@ -1,3 +1,10 @@
+---
+title: 如何使用 zLibrary
+labels: [工具, 阅读]
+summary: 微信读书开始限制免费阅读后，通过 Telegram 机器人找到 zLibrary 镜像站，配合科学上网继续免费获取电子书资源。
+keywords: [zLibrary, 电子书, Telegram, 微信读书]
+---
+
 ## 如何使用 zLibrary
 
 > **摘要：** 微信读书开始限制免费阅读后，通过 Telegram 机器人找到 zLibrary 镜像站，配合科学上网继续免费获取电子书资源。
@@ -12,7 +19,7 @@
 
 实在是受不了这种，我是提倡知识付费的，但是白嫖还是快乐的。我想起了之前看到的一个视频里面提到过一个免费的在线图书馆，资源贼拉多，它就是大名鼎鼎的**[zlibrary](https://lib-boxnfxb7fl57xmwt2nd5h4gx.1lib.fr/)**。
 
-这个网站的官网已经被封了，一些镜像站也被封了。我是在telegram里面找到了一些组群，在里面找到了一个可以使用的机器人：https://t.me/fbooki。
+这个网站的官网已经被封了，一些镜像站也被封了。我是在 telegram 里面找到了一些组群，在里面找到了一个可以使用的机器人：https://t.me/fbooki。
 
 ![](https://cdn.wuh.site/2023-06/2023-06-11-031246.png)
 
@@ -28,4 +35,4 @@
 
 **注意**:
 
-1. 使用zlibrary有一个大前提，准备好科学上网
+1. 使用 zlibrary 有一个大前提，准备好科学上网
