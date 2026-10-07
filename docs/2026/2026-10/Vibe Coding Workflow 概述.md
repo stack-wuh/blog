@@ -2,7 +2,7 @@
 title: Vibe Coding Workflow 概述
 labels: [ai]
 summary: 重点不是让 AI 更快写代码，而是让它在正确的阶段做正确的事、失败时停得住——一套包含阶段边界、启发式探索、渐进式披露、信号机制、自动迭代与基建的团队工作流。
-cover: https://wuh.onaliyun.com/2025-10/2026-10-07-cover-vibe-coding-workflow.png
+cover: https://cdn.wuh.site/2026-10/2026-10-07-122611.png
 keywords: [Vibe Coding, AI 工作流, 智能体, 团队协作]
 ---
 
