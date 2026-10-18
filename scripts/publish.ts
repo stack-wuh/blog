@@ -34,6 +34,17 @@ function buildMetadataBlock(fm: Frontmatter): string {
   return `\n\n<!-- wuh-site-metadata: ${JSON.stringify(meta)} -->`
 }
 
+// 把封面图嵌进正文第一个标题后（与既有发布惯例一致，如坐忘歌 #165）
+function embedCover(body: string, cover?: string): string {
+  if (!cover) return body
+  if (body.includes(`](${cover})`)) return body
+  const lines = body.split('\n')
+  const headingIdx = lines.findIndex((line) => /^#{1,6}\s/.test(line))
+  if (headingIdx === -1) return `![](${cover})\n\n${body}`
+  lines.splice(headingIdx + 1, 0, '', `![](${cover})`)
+  return lines.join('\n')
+}
+
 async function main() {
   const filePath = process.argv[2]
   if (!filePath) {
@@ -88,7 +99,7 @@ async function main() {
 
   const labels = parseLabels(fm.labels)
   const metadataBlock = buildMetadataBlock(fm)
-  const issueBody = body.trim() + metadataBlock
+  const issueBody = embedCover(body.trim(), fm.cover) + metadataBlock
 
   const octokit = new Octokit({ auth: token })
 
