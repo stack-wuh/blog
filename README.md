@@ -10,7 +10,7 @@
 
 ```
 写作 (本仓库 markdown)
-  │  pnpm post <file>
+  │  shadow-dev blog publish
   ▼
 GitHub Issues (stack-wuh/blog 仓库，充当 CMS)
   │  webhook / 发布后即时同步
@@ -32,8 +32,9 @@ pnpm install            # 安装依赖
 pnpm docs:dev           # 本地开发 (localhost:4000)
 pnpm docs:build         # 构建静态站点 (输出 docs/.vitepress/dist)
 pnpm docs:preview       # 预览构建产物 (localhost:4400)
-pnpm post <markdown文件> # 发布文章到 GitHub Issues 并同步主站
 ```
+
+发布文章不再走本仓库脚本，统一使用 [shadow-dev CLI](https://github.com/stack-wuh/shadow-dev-cli) 的 `blog publish` 域（见下）。
 
 ## 发布文章
 
@@ -51,10 +52,17 @@ keywords: [关键词1]     # 选填，主站 SEO 关键词
 正文内容...
 ```
 
-执行 `pnpm post <file>` 后发生两件事：
+发布分两步（`--file` 为文章路径，任意目录可执行）：
+
+```bash
+shadow-dev blog publish plan --file <markdown文件>
+shadow-dev blog publish execute --file <markdown文件> --plan-hash <plan 输出> --confirm
+```
+
+execute 后发生两件事：
 
 1. 在 `stack-wuh/blog` 仓库创建 Issue（`summary` / `cover` / `keywords` 以 `wuh-site-metadata` 注释块附在正文尾部，供主站解析）；
-2. 立即调用 `POST {SYNC_URL}/v2/webhook/sync/{issue.number}` 触发 server 同步入库，无需等待 webhook。
+2. 立即调用 `POST {SYNC_URL}/v2/webhook/sync/{issue.number}` 触发 server 同步入库，无需等待 webhook（同步失败不阻断发布，webhook 兜底）。
 
 所需环境变量（支持仓库根目录 `.env` 文件）：
 
@@ -62,6 +70,8 @@ keywords: [关键词1]     # 选填，主站 SEO 关键词
 GITHUB_TOKEN=ghp_xxx          # 需要 stack-wuh/blog 仓库的 Issue 写权限
 SYNC_URL=http://localhost:3200 # 主站 NestJS 地址，默认 localhost:3200
 ```
+
+也可持久化到 `.shadow-dev/config.json`：`{ "blog": { "repository": "stack-wuh/blog", "syncUrl": "http://localhost:3200" } }`（token 只走环境变量或 `.env`，不进配置文件）。
 
 ## 内容组织
 
